@@ -1,0 +1,28 @@
+.footer-container {
+    height: 291px;
+    background-color: rgb(20, 29, 47);
+    border-top: 4px solid #FA7902;
+}
+
+footer {
+    height: 100%;
+    width: 1440px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.footer-name {
+    font-size: 16px;
+
+    h2 {
+        font-size: 68px;
+        font-weight: 700;
+    }
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}

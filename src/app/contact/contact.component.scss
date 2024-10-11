@@ -1,0 +1,132 @@
+.contact-container {
+    width: 100%;
+    height: auto;
+    background-color: rgb(20, 29, 47);
+    color: white;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    .stripe {
+        width: 50px;
+        height: 1px;
+        border: 4px solid #FF4747;
+        position: absolute;
+        left: 0;
+        height: 1px;
+    }
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 140px;
+    max-width: 1440px;
+}
+
+.headline {
+    color: white;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+.contact-form-contact-bold {
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.contact-form {
+    display: flex;
+    position: relative;
+}
+
+.contact-form-info {
+    width: 50%;
+    padding: 30px 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-form-input {
+
+    form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: red;
+
+        span {
+            display: none;
+        }
+    }
+
+    input,
+    textarea
+    {
+        border: 1px solid #FF4747;
+        background-color: transparent;
+        border-radius: 10px;
+        padding: 15px 25px;
+        width: 617px;
+        resize: none;
+        color: white;
+    }
+}
+}
+
+#contact-form-policy {
+    display: flex;
+    gap: 10px;
+
+    input {
+        width: unset;
+        border: 1px solid #FA7902;
+        background-color: black;
+    }
+}
+
+#to-the-top {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.left-side-red-color {
+    width: 40%;
+    height: 45%;
+    background-image: url('../../assets/img/side-colors/red3-footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.button-disabled {
+    background-color: #B6B6B6;
+    pointer-events: none;
+    cursor: no-drop;
+}
+
+.send-button-class {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
