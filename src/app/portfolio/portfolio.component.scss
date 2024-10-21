@@ -118,13 +118,6 @@ header {
     align-items: center;
     flex-direction: row-reverse;
     text-align: right;
-
-    .el-pollo-loco-project-image {
-        width: 50%;
-        img {
-            width: 100%;
-        }
-    }
 }
 
 .el-pollo-loco-project-info {
@@ -159,4 +152,21 @@ header {
             font-size: 70px;
         }
     }
+
+    .join-project {
+
+        .join-project-info{
+        width: unset;
+    }
+    }
+
+    .el-pollo-locco-project {
+        margin-top: 70px;
+    }
+
+        .el-pollo-loco-project-info {
+            width: unset;
+            align-items: unset;
+        }
+    
 }
