@@ -221,10 +221,12 @@
 
     .profil-info {
         span h1,
-        span h2,
-        span p
+        span h2
         {
             font-size: 40px;
+        }
+        span p {
+            font-size: 30px
         }
     }    
 }
@@ -236,10 +238,12 @@
 
     .profil-info {
         span h1,
-        span h2,
-        span p
+        span h2
         {
             font-size: 32px;
+        }
+        span p {
+            font-size: 20px;
         }
     }
 
@@ -253,10 +257,12 @@
         padding-right: unset;
         
         span h1,
-        span h2,
-        span p
+        span h2
         {
             font-size: 24px;
+        }
+        span p {
+            font-size: 18px;
         }
     }
 }
