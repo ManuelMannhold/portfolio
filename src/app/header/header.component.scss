@@ -76,7 +76,7 @@
     align-items: center;
     gap: 40px;
     padding-top: 106px;
-    padding-right: 150px;
+    padding-right: 100px;
 
     a {
         z-index: 1001;
@@ -84,7 +84,7 @@
 
     span p {
         transform: rotate(-90deg);
-        font-size: 64px;
+        font-size: 42px;
     }
 
     div {
@@ -192,6 +192,10 @@
 
     .vector {
         bottom: -436px;
+    }
+
+    .scroll-down {
+        right: 40px;
     }
 }
 

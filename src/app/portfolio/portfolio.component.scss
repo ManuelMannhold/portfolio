@@ -97,9 +97,9 @@ header {
     padding-top: 100px;
 
     .join-project-image {
-        width: 50%;
         img {
             width: 100%;
+            min-width: 376px;
         }
     }
 
@@ -118,6 +118,13 @@ header {
     align-items: center;
     flex-direction: row-reverse;
     text-align: right;
+
+    .el-pollo-loco-project-image {
+        img {
+            width: 100%;
+            min-width: 376px;
+        }
+    }
 }
 
 .el-pollo-loco-project-info {
@@ -169,4 +176,17 @@ header {
             align-items: unset;
         }
     
+}
+
+@media(max-width: 450px) {
+    #portfolio-anchor {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    header {
+        h2 {
+            font-size: 45px;
+            width: 100%;
+        }
+    }
 }
