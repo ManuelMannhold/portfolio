@@ -100,10 +100,8 @@ section {
     display: flex;
     gap: 10px;
 
-    input {
-        width: unset;
-        border: 1px solid #FA7902;
-        background-color: black;
+    #checkbox-image {
+        cursor: pointer;
     }
 }
 

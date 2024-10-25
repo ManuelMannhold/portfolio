@@ -10,6 +10,7 @@ import { DeferBlockFixture } from '@angular/core/testing';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+showCheckbox: any;
 
   constructor() {
     this.inputBorder();
@@ -50,5 +51,17 @@ export class ContactComponent {
             inputMessage.classList.add('border-green');
         }
     }
+}
+
+toggleImage() {
+let sendButton:HTMLElement | null = document.getElementById('contact-message-send-button');
+
+  this.showCheckbox = !this.showCheckbox;
+
+  if(this.showCheckbox && sendButton) {
+    sendButton.classList.remove('button-disabled')
+  } else {
+    sendButton?.classList.add('button-disabled');
+  }
 }
 }

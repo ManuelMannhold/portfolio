@@ -30,7 +30,7 @@
                         <span>Bitte das Feld ausfüllen!</span>
                     </div>
                     <span id="contact-form-policy">
-                        <input type="checkbox">
+                        <img id="checkbox-image" (click)="toggleImage()" src="{{ showCheckbox ? '../../../../assets/img/checkbox_checked.png' : '../../../../assets/img/checkbox_empty.png'}}">
                         <p>Ich habe die AGB gelesen und stimme zu</p>
                     </span>
                     <div class="send-button-class">
