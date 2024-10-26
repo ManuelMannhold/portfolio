@@ -9,4 +9,20 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  constructor() {
+    this.closeResponsiveMenu();
+  }
+
+  openResponsiveMenu() {
+    let openMenu:HTMLElement | null = document.getElementById('responsive-menu');
+    if(openMenu) 
+    openMenu.style.transform = 'translate(0)';
+  }
+
+  closeResponsiveMenu() {
+    let responsMenu = document.getElementById('responsive-menu');
+    if(responsMenu) 
+    responsMenu.style.transform = 'translate(10000px)';
+  }
+
 }
