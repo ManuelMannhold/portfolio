@@ -10,6 +10,7 @@
 .header-container {
     height: 100vh;
     background-color: rgb(20, 29, 47);
+    overflow: hidden;
 }
 
 .header {
@@ -143,6 +144,7 @@
     z-index: 100;
     position: absolute;
     bottom: -640px;
+    overflow: hidden;
 }
 
 .scroll-down {
@@ -299,7 +301,7 @@
         span h1,
         span h2
         {
-            font-size: 24px;
+            font-size: 22px;
         }
         span p {
             font-size: 18px;

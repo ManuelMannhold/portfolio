@@ -26,3 +26,16 @@ footer {
     display: flex;
     gap: 50px;
 }
+
+@media(max-width: 1450px) {
+    footer {
+        width: unset;
+    }
+}
+
+@media(max-width: 900px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
