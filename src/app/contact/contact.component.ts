@@ -10,13 +10,10 @@ import { DeferBlockFixture } from '@angular/core/testing';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-showCheckbox: any;
 
-  constructor() {
-    setInterval(() => {
-      
-      this.inputBorder();
-    }, 1000);
+
+  constructor() {      
+    this.inputBorder();
     this.contactMe();
   }
 
@@ -31,6 +28,8 @@ showCheckbox: any;
   //     button?.classList.add('button');
   //     }
   //   }
+
+  showCheckbox!: boolean;
 
   contactMe() {
     document.getElementById('contact-me-focus')?.addEventListener('click', () => {
@@ -49,6 +48,7 @@ showCheckbox: any;
             inputMail.classList.add('border-red');
             inputMessage.classList.add('border-red');
         } else {
+          inputName.classList.remove('border-red');
             inputName.classList.add('border-green');
             inputMail.classList.add('border-green');
             inputMessage.classList.add('border-green');
@@ -61,17 +61,18 @@ let sendButton:HTMLElement | null = document.getElementById('contact-message-sen
 let inputName = document.getElementById('input-name') as HTMLInputElement;
 let inputMail = document.getElementById('input-mail') as HTMLInputElement;
 let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
-let errorMessage = document.getElementById('error-message-input-fields');
+let errorMessage = document.getElementById('error-message-input-fields') as HTMLDivElement;
 
   this.showCheckbox = !this.showCheckbox;
 
   if(sendButton) {
-    if(!this.showCheckbox) {
+    if(this.showCheckbox) {
       if(inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
         sendButton.classList.remove('button-disabled');
       }
       else {
         sendButton.classList.add('button-disabled');
+        errorMessage.classList.remove('d-none');
       }
     }
       else {
