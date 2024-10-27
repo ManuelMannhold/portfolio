@@ -13,7 +13,10 @@ export class ContactComponent {
 showCheckbox: any;
 
   constructor() {
-    this.inputBorder();
+    setInterval(() => {
+      
+      this.inputBorder();
+    }, 1000);
     this.contactMe();
   }
 
@@ -42,11 +45,11 @@ showCheckbox: any;
 
     if (inputName && inputMail && inputMessage) {
         if (inputName.value === '' || inputMail.value === '' || inputMessage.value === '') {
-            inputName.style.border = '1px solid red';
+            inputName.classList.add('border-red');
             inputMail.classList.add('border-red');
             inputMessage.classList.add('border-red');
         } else {
-            inputName.style.border = '1px solid green';
+            inputName.classList.add('border-green');
             inputMail.classList.add('border-green');
             inputMessage.classList.add('border-green');
         }
@@ -55,13 +58,25 @@ showCheckbox: any;
 
 toggleImage() {
 let sendButton:HTMLElement | null = document.getElementById('contact-message-send-button');
+let inputName = document.getElementById('input-name') as HTMLInputElement;
+let inputMail = document.getElementById('input-mail') as HTMLInputElement;
+let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
+let errorMessage = document.getElementById('error-message-input-fields');
 
   this.showCheckbox = !this.showCheckbox;
 
-  if(this.showCheckbox && sendButton) {
-    sendButton.classList.remove('button-disabled')
-  } else {
-    sendButton?.classList.add('button-disabled');
+  if(sendButton) {
+    if(!this.showCheckbox) {
+      if(inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
+        sendButton.classList.remove('button-disabled');
+      }
+      else {
+        sendButton.classList.add('button-disabled');
+      }
+    }
+      else {
+        sendButton.classList.add('button-disabled');
+      }
+    }
   }
-}
 }

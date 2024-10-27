@@ -12,7 +12,8 @@
                 <p>
                     Kontaktieren Sie mich gerne über das Nachrichtenfeld falls es Fragen oder Anmerkungen gibt
                 </p>
-                <p>Sie brauchen einen Frontend Developer? <span class="contact-form-contact-bold" id="contact-me-focus" onclick="contactMe()">Kontaktieren Sie
+                <p>Sie brauchen einen Frontend Developer? <span class="contact-form-contact-bold" id="contact-me-focus"
+                        (click)="contactMe()">Kontaktieren Sie
                         mich</span></p>
             </div>
             <div class="contact-form-input">
@@ -30,7 +31,8 @@
                         <span>Bitte das Feld ausfüllen!</span>
                     </div>
                     <span id="contact-form-policy">
-                        <img id="checkbox-image" (click)="toggleImage()" src="{{ showCheckbox ? '../../../../assets/img/checkbox_checked.png' : '../../../../assets/img/checkbox_empty.png'}}">
+                        <img id="checkbox-image" (click)="toggleImage()"
+                            src="{{ showCheckbox ? '../../../../assets/img/checkbox_checked.png' : '../../../../assets/img/checkbox_empty.png'}}">
                         <p>Ich habe die AGB gelesen und stimme zu</p>
                     </span>
                     <div class="send-button-class">
@@ -44,7 +46,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="left-side-red-color"></div>
     </section>
 </div>
