@@ -2,6 +2,7 @@
     width: 100%;
     background-color: rgb(20,29,47);
     height: 100vh;
+    display: flex;
 }
 
 section {
@@ -140,6 +141,10 @@ section {
     #my-skill-anchor {
         padding-right: 20px;
         text-align: center;
+
+        section {
+            padding-left: unset;
+        }
     }
 
     .right {

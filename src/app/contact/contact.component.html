@@ -17,18 +17,27 @@
                         mich</span></p>
             </div>
             <div class="contact-form-input">
-                <form action="">
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm" >
                     <div>
-                        <input type="text" id="input-name" placeholder="Name" required>
-                        <span>Bitte das Feld ausfüllen!</span>
+                        <label for="input-name"></label>
+                        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" id="input-name" placeholder="Name" required>
+                        @if(!name.valid && name.touched && !name.disabled) {
+                            <span>Bitte Nachricht eingeben</span>
+                        }
                     </div>
                     <div>
-                        <input type="email" id="input-mail" placeholder="Email Adresse" required>
-                        <span>Bitte das Feld ausfüllen!</span>
+                        <label for="input-mail"></label>
+                        <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" id="input-mail" placeholder="Email Adresse" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                        @if(!email.valid && email.touched && !email.disabled) {
+                            <span>Bitte Nachricht eingeben</span>
+                        }
                     </div>
                     <div>
-                        <textarea id="input-message" rows="5" cols="15" wrap="hard" placeholder="Nachricht"></textarea>
-                        <span>Bitte das Feld ausfüllen!</span>
+                        <label for="input-message"></label>
+                        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="input-message" rows="5" cols="15" wrap="hard" placeholder="Nachricht"></textarea>
+                        @if(!message.valid && message.touched && !message.disabled) {
+                            <span>Bitte Nachricht eingeben</span>
+                        }
                     </div>
                     <span id="contact-form-policy">
                         <img id="checkbox-image" (click)="toggleImage()"

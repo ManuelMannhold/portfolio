@@ -70,6 +70,8 @@ section {
 
 .contact-form-input {
     flex: 1;
+    z-index: 1001;
+
     form {
     display: flex;
     flex-direction: column;
@@ -159,15 +161,32 @@ section {
     }
 }
 
-@media(max-width:460px) {
-    .headline {
-        font-size: 45px;
+@media(max-width: 600px) {
+    header {
+
+        h2 {
+            font-size: 70px;
+        }
     }
+
+    #to-the-top {
+        position: unset;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media(max-width:450px) {
+   
 
     header {
         width: 100%;
         display: flex;
         gap: 30px;
+
+        .headline {
+            font-size: 45px;
+        }
     }
 
     section{

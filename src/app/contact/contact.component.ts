@@ -1,33 +1,61 @@
 import { style } from '@angular/animations';
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { DeferBlockFixture } from '@angular/core/testing';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
 
+  http = inject(HttpClient);
 
   constructor() {      
     this.inputBorder();
     this.contactMe();
   }
 
-  // buttonEnabled() {
-  //   let button = document.getElementById('contact-message-send-button');
-  //   let buttonAble:boolean = true;
+  contactData = {
+    name: "",
+    email: "",
+    message: "",
+  }
 
-  //   if(!buttonAble) {
-  //     button?.classList.add('button-disabled');
-  //   }
-  //   else {
-  //     button?.classList.add('button');
-  //     }
-  //   }
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://deineDomain.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
+    }
+  }
 
   showCheckbox!: boolean;
 
