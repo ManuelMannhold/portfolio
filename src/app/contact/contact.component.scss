@@ -26,10 +26,6 @@ header {
         left: 0;
         height: 1px;
     }
-
-    h2 {
-        padding-left: 40px;
-    }
 }
 
 section {
@@ -117,6 +113,7 @@ section {
     position: absolute;
     right: 10px;
     bottom: 0;
+    z-index: 1200;
 
     :hover {
         cursor: pointer;
@@ -173,6 +170,7 @@ section {
         position: unset;
         display: flex;
         justify-content: flex-end;
+        padding-top: 20px;
     }
 }
 
@@ -184,13 +182,21 @@ section {
         display: flex;
         gap: 30px;
 
+        .stripe {
+            position: relative;
+        }
+
         .headline {
             font-size: 45px;
         }
     }
 
     section{
-        padding-left: 20px;
         padding-right: 20px;
+        padding-left: unset;
+    }
+
+    .contact-form {
+        padding-left: 20px;
     }
 }

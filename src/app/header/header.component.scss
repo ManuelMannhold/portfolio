@@ -40,7 +40,7 @@
 }
 
 #responsive-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -107,7 +107,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 40px;
     padding-top: 106px;
     padding-right: 100px;
 
@@ -140,7 +139,6 @@
 }
 
 .vector {
-    width: 100%;
     z-index: 100;
     position: absolute;
     bottom: -495px;
@@ -217,7 +215,6 @@
 
     .profil-info {
         z-index: 1020;
-        gap: unset;
 
         div {
             width: unset;
@@ -265,12 +262,24 @@
     }    
 }
 
-@media (max-width: 590px) {
+@media(max-width: 740px) {
     .links {
         display: none;
     }
 
+    #responsive-menu-button {
+        display: inline!important;
+    }
+
+    .header {
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 605px) {
     .profil-info {
+        padding-right: unset;
+
         span h1,
         span h2
         {
@@ -289,8 +298,9 @@
         padding-right: 20px;
     }
 
-    #responsive-menu-button {
-        display: inline!important;
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -298,13 +308,23 @@
     .profil-info {
         padding-right: unset;
         
-        span h1,
-        span h2
+        span h1
         {
             font-size: 22px;
         }
+
+        span h2 {
+            font-size: 20px;
+        }
         span p {
             font-size: 18px;
+        }
+    }
+
+    .profil {
+
+        .profil-image {
+            left: 0;
         }
     }
 }

@@ -3,6 +3,7 @@
     background-color: rgb(20,29,47);
     height: 100vh;
     display: flex;
+    overflow: hidden;
 }
 
 section {
@@ -133,6 +134,14 @@ section {
             h2 {
                 font-size: 70px;
             }
+        }
+    }
+
+    .my-skills-container {
+
+        section {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 }
