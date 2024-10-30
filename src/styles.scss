@@ -72,3 +72,8 @@ a {
     cursor: pointer;
 }
 
+@media(max-width: 630px) {
+    body {
+        display: unset;
+    }
+}
