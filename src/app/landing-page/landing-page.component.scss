@@ -275,6 +275,60 @@
 
 @media(max-height: 950px) {
     .vector {
-        bottom: -528px;
+        bottom: -440px;
+    }
+
+    .profil-info {
+        padding-top: 300px;
+    }
+}
+
+@media(max-height: 840px) {
+    .vector {
+        bottom: -458px;
+    }
+
+    .profil {
+
+        img{
+            left: unset!important;
+            width: 80%!important;
+        }
+    }
+
+    .profil-info {
+        padding-top: 270px;
+    }
+}
+
+@media(max-height: 740px) {
+    .vector {
+        bottom: -525px;
+    }
+}
+
+@media(max-height: 670px) {
+    .vector {
+        bottom: -535px;
+    }
+
+    .profil-info {
+        padding-top: 210px;
+
+        a {
+
+            button {
+                width: 190px;
+                height: 50px;
+            }
+        }
+    }
+
+    .profil {
+
+        img{
+            left: unset!important;
+            width: 80%!important;
+        }
     }
 }
