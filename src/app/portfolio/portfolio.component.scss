@@ -180,6 +180,20 @@ header {
             align-items: unset;
         }
     
+        .portfolio-container {
+            padding-left: 20px;
+
+            #portfolio-anchor {
+                padding-left: unset;
+            }
+        }
+
+        .projects {
+
+            .projects-description {
+                padding-left: unset;
+            }
+        }
 }
 
 @media(max-width: 450px) {
