@@ -17,6 +17,7 @@ export class ContactComponent {
 inputName: any;
 
   constructor() {
+    this.displayErrorMessageForInput();
     this.contactMe();
   }
 
@@ -63,6 +64,20 @@ inputName: any;
     document.getElementById('contact-me-focus')?.addEventListener('click', () => {
       document.getElementById('input-name')?.focus();
     })
+  }
+
+  displayErrorMessageForInput() {
+    let inputName = document.getElementById('input-name') as HTMLInputElement;
+    let inputMail = document.getElementById('input-mail') as HTMLInputElement;
+    let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
+
+    if(inputName && inputMail && inputMessage){
+      if(inputName.value === '' || inputMail.value === '' || inputMessage.value === '') {
+        document.getElementById('input-span')?.classList.remove('d-none');
+      } else {
+        document.getElementById('input-span')?.classList.add('d-none');
+      }
+      }
   }
 
   toggleImage() {

@@ -1,9 +1,21 @@
 input:invalid, textarea:invalid {
     border: 1px solid red;
+
+    #input-span {
+        display: inline;
+    }
 }
 
 input:valid, textarea:valid {
     border: 1px solid green;
+
+    #input-span {
+        display: none;
+    }
+}
+
+.d-none {
+    display: none;
 }
 
 .contact-container {
@@ -78,10 +90,6 @@ section {
         flex-direction: column;
         gap: 5px;
         color: red;
-
-        span {
-            display: none;
-        }
     }
 
     input,
