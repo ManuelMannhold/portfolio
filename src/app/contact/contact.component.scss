@@ -1,8 +1,8 @@
-.border-red {
+input:invalid, textarea:invalid {
     border: 1px solid red;
 }
 
-.border-green {
+input:valid, textarea:valid {
     border: 1px solid green;
 }
 
@@ -87,7 +87,6 @@ section {
     input,
     textarea
     {
-        border: 1px solid #FF4747;
         background-color: transparent;
         border-radius: 10px;
         padding: 15px 25px;

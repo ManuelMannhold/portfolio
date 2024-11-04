@@ -14,9 +14,9 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactComponent {
 
   http = inject(HttpClient);
+inputName: any;
 
-  constructor() {      
-    this.inputBorder();
+  constructor() {
     this.contactMe();
   }
 
@@ -65,44 +65,25 @@ export class ContactComponent {
     })
   }
 
-  inputBorder() {
+  toggleImage() {
+    let sendButton: HTMLElement | null = document.getElementById('contact-message-send-button');
     let inputName = document.getElementById('input-name') as HTMLInputElement;
     let inputMail = document.getElementById('input-mail') as HTMLInputElement;
     let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
+    let errorMessage = document.getElementById('error-message-input-fields') as HTMLDivElement;
 
-    if (inputName && inputMail && inputMessage) {
-        if (inputName.value === '' || inputMail.value === '' || inputMessage.value === '') {
-            inputName.classList.add('border-red');
-            inputMail.classList.add('border-red');
-            inputMessage.classList.add('border-red');
-        } else {
-          inputName.classList.remove('border-red');
-            inputName.classList.add('border-green');
-            inputMail.classList.add('border-green');
-            inputMessage.classList.add('border-green');
+    this.showCheckbox = !this.showCheckbox;
+
+    if (sendButton) {
+      if (this.showCheckbox) {
+        if (inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
+          sendButton.classList.remove('button-disabled');
         }
-    }
-}
-
-toggleImage() {
-let sendButton:HTMLElement | null = document.getElementById('contact-message-send-button');
-let inputName = document.getElementById('input-name') as HTMLInputElement;
-let inputMail = document.getElementById('input-mail') as HTMLInputElement;
-let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
-let errorMessage = document.getElementById('error-message-input-fields') as HTMLDivElement;
-
-  this.showCheckbox = !this.showCheckbox;
-
-  if(sendButton) {
-    if(this.showCheckbox) {
-      if(inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
-        sendButton.classList.remove('button-disabled');
+        else {
+          sendButton.classList.add('button-disabled');
+          errorMessage.classList.remove('d-none');
+        }
       }
-      else {
-        sendButton.classList.add('button-disabled');
-        errorMessage.classList.remove('d-none');
-      }
-    }
       else {
         sendButton.classList.add('button-disabled');
       }

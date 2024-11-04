@@ -273,6 +273,18 @@
 
 /*<-----------height------------->*/
 
+@media(min-height: 1130px) {
+    .vector {
+        bottom: -210px;
+    }
+}
+
+@media(max-height: 1050px) {
+    .vector {
+        bottom: -250px;
+    }
+}
+
 @media(max-height: 950px) {
     .vector {
         bottom: -440px;
