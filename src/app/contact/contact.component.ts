@@ -14,7 +14,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactComponent {
 
   http = inject(HttpClient);
-inputName: any;
+  inputName: any;
 
   constructor() {
     this.displayErrorMessageForInput();
@@ -71,13 +71,13 @@ inputName: any;
     let inputMail = document.getElementById('input-mail') as HTMLInputElement;
     let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
 
-    if(inputName && inputMail && inputMessage){
-      if(inputName.value === '' || inputMail.value === '' || inputMessage.value === '') {
+    if (inputName && inputMail && inputMessage) {
+      if (inputName.value === '' || inputMail.value === '' || inputMessage.value === '') {
         document.getElementById('input-span')?.classList.remove('d-none');
       } else {
         document.getElementById('input-span')?.classList.add('d-none');
       }
-      }
+    }
   }
 
   toggleImage() {
@@ -91,17 +91,21 @@ inputName: any;
 
     if (sendButton) {
       if (this.showCheckbox) {
-        if (inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
-          sendButton.classList.remove('button-disabled');
-        }
-        else {
-          sendButton.classList.add('button-disabled');
-          errorMessage.classList.remove('d-none');
-        }
+        this.ifElseSendButtonAddOrRemoveClass(sendButton, inputName, inputMail, inputMessage, errorMessage);
       }
       else {
         sendButton.classList.add('button-disabled');
       }
+    }
+  }
+
+  ifElseSendButtonAddOrRemoveClass(sendButton: HTMLElement, inputName: HTMLInputElement, inputMail: HTMLInputElement, inputMessage: HTMLTextAreaElement, errorMessage: HTMLDivElement) {
+    if (inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
+      sendButton.classList.remove('button-disabled');
+    }
+    else {
+      sendButton.classList.add('button-disabled');
+      errorMessage.classList.remove('d-none');
     }
   }
 }

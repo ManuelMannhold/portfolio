@@ -311,6 +311,10 @@
     .vector {
         bottom: -446px;
     }
+
+    .profil-info {
+        padding-top: 210px;
+    }
 }
 
 @media(max-height: 670px) {
@@ -336,5 +340,11 @@
             left: unset!important;
             width: 80%!important;
         }
+    }
+}
+
+@media(max-height: 620px) {
+    .profil-info {
+        padding-top: 160px;
     }
 }
