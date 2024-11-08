@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class ImprintComponent {
 
+  constructor() {
+    this.hideImprint();
+  }
+
+  hideImprint() {
+    document.getElementById('imprint-container')?.classList.add('d-none');
+  }
 }

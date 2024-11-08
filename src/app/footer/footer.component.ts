@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  constructor() {
+    this.showImprint();
+  }
+
+  showImprint() {
+    document.getElementById('imprint')?.classList.remove('d-none');
+  }
 }

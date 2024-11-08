@@ -1,0 +1,17 @@
+<div class="container">
+    <div id="arrow-left" (click)="goToPrevious()">
+      <img src="../../assets/img/arrow-left.png" alt="Previous">
+    </div>
+  
+    <div id="member-container">
+      <div *ngFor="let testimonial of testimonials; let i = index" [class.active]="i === currentIndex">
+        <h3>{{ testimonial.name }}</h3>
+        <p>{{ testimonial.text }}</p>
+      </div>
+    </div>
+  
+    <div id="arrow-right" (click)="goToNext()">
+      <img src="../../assets/img/arrow-right.png" alt="Next">
+    </div>
+  </div>
+  

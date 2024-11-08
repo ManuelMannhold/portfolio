@@ -8,14 +8,31 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { ImprintComponent } from './imprint/imprint.component';
+import { MemberOpinionsComponent } from './member-opinions/member-opinions.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, ImprintComponent, MemberOpinionsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'portfolio';
+
+  constructor() {
+    this.showImprint();
+  }
+
+  showImprint() {
+    document.getElementById('imprint')?.addEventListener('click', () => {
+      document.getElementById('imprint-component')?.classList.remove('d-none');
+    });
+  }
+
+  hideImprint() {
+    document.getElementById('imprint')?.classList.remove('d-none');
+  }
 }
