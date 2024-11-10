@@ -8,14 +8,13 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from "./landing-page/landing-page.component";
-import { ImprintComponent } from './imprint/imprint.component';
 import { MemberOpinionsComponent } from './member-opinions/member-opinions.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, ImprintComponent, MemberOpinionsComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, MemberOpinionsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
