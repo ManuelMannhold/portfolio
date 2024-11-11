@@ -100,3 +100,48 @@ footer {
         ;
     }
 }
+
+@media(max-width: 820px) {
+    #imprint-container {
+        text-align: center;
+    }
+}
+
+@media(max-width: 500px) {
+    .adress {
+        
+        h1 {
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 30px
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .adress {
+        
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 20px
+        }
+    }
+
+    .my-contact {
+
+        p {
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+
+                a {
+                    font-size: 25px;
+                }
+        }
+    }
+}
