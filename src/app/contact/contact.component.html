@@ -1,10 +1,10 @@
-<div class="contact-container">
-    <section id="contact-anchor">
+<div class="contact-container" >
+    <section>
         <header>
             <div class="stripe"></div>
             <h2 class="headline">Kontakt</h2>
         </header>
-        <div class="contact-form">
+        <div class="contact-form"   id="contact-anchor">
             <div class="contact-form-info">
                 <h3>
                     Haben Sie Fragen?
@@ -45,7 +45,7 @@
                         <p>Ich habe die AGB gelesen und stimme zu</p>
                     </span>
                     <div class="send-button-class">
-                        <button id="contact-message-send-button" class="button-disabled">Nachricht Abschicken</button>
+                        <button id="contact-message-send-button" class="button-disabled" (click)="showOverlayMessageSend()">Nachricht Abschicken</button>
                     </div>
                 </form>
             </div>
@@ -56,4 +56,12 @@
 
         <div class="left-side-red-color"></div>
     </section>
+    <div id="email-alert" class="d-none">
+        <div class="email-alert-text">
+            <h2>
+                Die Nachricht wurde gesendet
+            </h2>
+            <img src="../../assets/img/green-hook.png" alt="">
+        </div>
+    </div>
 </div>

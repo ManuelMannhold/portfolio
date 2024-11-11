@@ -59,6 +59,7 @@ export class ContactComponent {
   }
 
   showCheckbox!: boolean;
+  sendMail: boolean = false;
 
   contactMe() {
     document.getElementById('contact-me-focus')?.addEventListener('click', () => {
@@ -102,10 +103,18 @@ export class ContactComponent {
   ifElseSendButtonAddOrRemoveClass(sendButton: HTMLElement, inputName: HTMLInputElement, inputMail: HTMLInputElement, inputMessage: HTMLTextAreaElement, errorMessage: HTMLDivElement) {
     if (inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
       sendButton.classList.remove('button-disabled');
+      this.sendMail = true;
     }
     else {
       sendButton.classList.add('button-disabled');
       errorMessage.classList.remove('d-none');
     }
   }
-}
+
+  showOverlayMessageSend() {
+    if (!this.sendMail) {
+      document.getElementById('email-alert')?.classList.remove('d-none');
+      }
+      this.ifElseSendButtonAddOrRemoveClass();
+    }
+  }

@@ -1,3 +1,7 @@
+.d-none {
+    display: none!important;
+}
+
 input:invalid, textarea:invalid {
     border: 1px solid red;
 
@@ -148,6 +152,37 @@ section {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+#email-alert {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 5000;
+}
+
+.email-alert-text {
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 24px;
+    color: black;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
 }
 
 @media(max-width: 900px) {
