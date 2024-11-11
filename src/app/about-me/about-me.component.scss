@@ -86,7 +86,34 @@ section {
     }
 }
 
+.personal {
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
 
+     img {
+        max-width: 50px;
+        max-height: 60px;
+     }
+}
+
+.job {
+    display: flex;
+    gap: 20px;
+    padding-top: 40px;
+
+     img {
+        max-width: 50px;
+        max-height: 60px;
+     }
+}
+
+@media(max-width:1200px) {
+    section{
+        height: unset;
+        margin-bottom: 40px;
+    }
+}
 
 @media (max-width: 760px) {
     .left {

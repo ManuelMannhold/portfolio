@@ -8,16 +8,20 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  showImprint() {
 
-    const imprintElement = document.getElementById('imprint');
+  constructor() {
+    
+  }
+  showImprint(event: Event) {
+    event.preventDefault();
+    let imprintElement = document.getElementById('imprint-container');
     if (imprintElement) {
       imprintElement.classList.remove('d-none');
     }
   }
 
   hideImprint() {
-    const imprintContainer = document.getElementById('imprint-container');
+    let imprintContainer = document.getElementById('imprint-container');
     if (imprintContainer) {
       imprintContainer.classList.add('d-none');
     }

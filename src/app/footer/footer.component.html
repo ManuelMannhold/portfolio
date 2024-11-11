@@ -2,7 +2,7 @@
     <footer>
         <div class="footer-name">
             <h2>Manuel</h2>
-            <a href="" (click)="showImprint()" id="imprint">Impressum</a>
+            <a href="#" (click)="showImprint($event)" id="imprint">Impressum</a>
         </div>
         <div class="footer-created">
             <p>&copy; Manuel Mannhold 2024</p>
@@ -13,8 +13,8 @@
             <a class="linkedin-button" href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin" target="_blank"><img src="../../assets/img/linkedin-button.png" alt=""></a>
         </div>
     </footer>
-    <div id="imprint" class="d-none">
-        <div id="imprint-container">
+    <div id="imprint" >
+        <div id="imprint-container" class="d-none">
             <div id="close-imprint" (click)="hideImprint()">
                 <img src="../../assets/img/close-button.png" alt="">
             </div>

@@ -48,6 +48,7 @@ button {
     outline: none;
     border: none;
     z-index: 1000;
+    position: relative;
 
     &:hover {
         cursor: pointer;
