@@ -77,6 +77,13 @@ a {
     cursor: pointer;
 }
 
+@media(max-width: 1200px) {
+    * {
+        scroll-margin-top: 109px;
+        scroll-padding-top: unset;
+    }
+}
+
 @media(max-width: 630px) {
     body {
         display: unset;

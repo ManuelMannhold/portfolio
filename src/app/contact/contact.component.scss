@@ -2,6 +2,10 @@
     display: none!important;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 input:invalid, textarea:invalid {
     border: 1px solid red;
 
@@ -169,15 +173,19 @@ section {
 
 .email-alert-text {
     width: 50%;
-    height: 50%;
+    height: 30%;
     border-radius: 15px;
     display: flex;
     gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-size: 24px;
     color: black;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
 
         img {
             width: 40px;
@@ -217,8 +225,6 @@ section {
 }
 
 @media(max-width:450px) {
-   
-
     header {
         width: 100%;
         display: flex;
@@ -240,5 +246,16 @@ section {
 
     .contact-form {
         padding-left: 20px;
+    }
+
+    #email-alert {
+        padding-left: unset;
+        padding-right: unset;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .email-alert-text {
+        width: 100%;
     }
 }

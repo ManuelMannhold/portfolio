@@ -30,7 +30,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://manuel-mannhold.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -104,17 +104,28 @@ export class ContactComponent {
     if (inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
       sendButton.classList.remove('button-disabled');
       this.sendMail = true;
+
     }
     else {
       sendButton.classList.add('button-disabled');
-      errorMessage.classList.remove('d-none');
+
     }
   }
 
   showOverlayMessageSend() {
-    if (!this.sendMail) {
-      document.getElementById('email-alert')?.classList.remove('d-none');
-      }
-      this.ifElseSendButtonAddOrRemoveClass();
+    const emailAlert = document.getElementById('email-alert');
+
+    this.sendMail == true;
+    if (this.sendMail == true) {
+      emailAlert?.classList.remove('d-none');
+      emailAlert?.classList.add('no-scroll');
+      setTimeout(() => {
+        emailAlert?.classList.add('d-none');
+        emailAlert?.classList.remove('no-scroll');
+      }, 2000);
+      this.sendMail = false;
+      document.getElementById('contact-message-send-button')?.classList.add('button-disabled');
+      this.toggleImage();
     }
   }
+}
