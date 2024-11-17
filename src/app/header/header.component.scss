@@ -55,6 +55,7 @@ nav {
     transition: all 250ms ease-in-out;
     transform: translate(10000px);
     font-size: 32px;
+    z-index: 5000;
 
     div {
         cursor: pointer;

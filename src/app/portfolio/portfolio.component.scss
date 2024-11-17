@@ -82,7 +82,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 100px;
+    padding-right: 90px;
 
     .projects-description {
         color: white;
@@ -162,6 +162,10 @@ header {
         h2 {
             font-size: 70px;
         }
+    }
+
+    section {
+        padding-left: 20px;
     }
 
     .join-project {

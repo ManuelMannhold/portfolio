@@ -28,13 +28,33 @@ export class MemberOpinionsComponent {
     }
   ];
 
+  /**
+ * Advances to the next item in the testimonials array.
+ * 
+ * The function updates the `currentIndex` property to point to the next item in the `testimonials` array. 
+ * It ensures the index wraps around to the start when it reaches the end of the array by using the modulo operator.
+ * 
+ * @remarks
+ * This method assumes that the `testimonials` array is not empty. If the array is empty, 
+ * the behavior may need additional handling to avoid potential issues.
+ */
+
   goToNext(): void {
-    // Nächster Testimonial
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
   }
 
+  /**
+ * Moves to the previous item in the testimonials array.
+ * 
+ * The function updates the `currentIndex` property to point to the previous item in the `testimonials` array. 
+ * It ensures the index wraps around to the last item when it reaches the start of the array by using the modulo operator.
+ * 
+ * @remarks
+ * This method assumes that the `testimonials` array is not empty. If the array is empty, 
+ * additional handling may be required to prevent unintended behavior.
+ */
+
   goToPrevious(): void {
-    // Vorheriger Testimonial
     this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
   }
 
