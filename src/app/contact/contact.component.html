@@ -1,10 +1,10 @@
-<div class="contact-container" >
+<div class="contact-container">
     <section>
         <header>
             <div class="stripe"></div>
             <h2 class="headline">Kontakt</h2>
         </header>
-        <div class="contact-form"   id="contact-anchor">
+        <div class="contact-form" id="contact-anchor">
             <div class="contact-form-info">
                 <h3>
                     Haben Sie Fragen?
@@ -17,26 +17,30 @@
                         mich</span></p>
             </div>
             <div class="contact-form-input">
-                <form (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm" >
+                <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div>
                         <label for="input-name"></label>
-                        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" id="input-name" placeholder="Name" required>
+                        <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" id="input-name"
+                            placeholder="Name" required>
                         @if(!name.valid && name.touched && !name.disabled) {
-                            <span id="input-span" >Bitte Namen eingeben</span>
+                        <span id="input-span">Bitte Namen eingeben</span>
                         }
                     </div>
                     <div>
                         <label for="input-mail"></label>
-                        <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email" id="input-mail" placeholder="Email Adresse" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                        <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email"
+                            id="input-mail" placeholder="Email Adresse" required
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                         @if(!email.valid && email.touched && !email.disabled) {
-                            <span id="input-span" >Bitte gültige Email eingeben</span>
+                        <span id="input-span">Bitte gültige Email eingeben</span>
                         }
                     </div>
                     <div>
                         <label for="input-message"></label>
-                        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="input-message"  rows="5" cols="15" wrap="hard" placeholder="Nachricht" required></textarea>
+                        <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="input-message"
+                            rows="5" cols="15" wrap="hard" placeholder="Nachricht" required></textarea>
                         @if(!message.valid && message.touched && !message.disabled) {
-                            <span id="input-span" >Bitte Nachricht eingeben</span>
+                        <span id="input-span">Bitte Nachricht eingeben</span>
                         }
                     </div>
                     <span id="contact-form-policy">
@@ -45,16 +49,16 @@
                         <p>Ich bin einverstanden eine Email zu senden</p>
                     </span>
                     <div class="send-button-class">
-                        <button id="contact-message-send-button" class="button-disabled" (click)="showOverlayMessageSend()">Nachricht Abschicken</button>
+                        <button id="contact-message-send-button" class="button-disabled"
+                            (click)="showOverlayMessageSend()">Nachricht Abschicken</button>
                     </div>
                 </form>
             </div>
-                <a id="to-the-top" href="#top-view">
-                    <img src="../../assets/img/to-the-top.png" alt="">
-                </a>
+            <a id="to-the-top" href="#top-view">
+                <img src="../../assets/img/to-the-top.png" alt="">
+            </a>
         </div>
-
-        <div class="left-side-red-color"></div>
+        <img class="left-side-red-color" src="../../assets/img/side-colors/red3-footer.png" alt="">
     </section>
     <div id="email-alert" class="d-none">
         <div class="email-alert-text">

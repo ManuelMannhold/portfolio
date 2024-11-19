@@ -275,6 +275,12 @@
 
 /*<-----------height------------->*/
 
+@media(height > 1300px) {
+    .vector {
+        bottom: -215px;
+    }
+}
+
 @media(min-height: 1130px) {
     .vector {
         bottom: -210px;

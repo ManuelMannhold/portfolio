@@ -31,7 +31,6 @@ input:valid, textarea:valid {
     height: auto;
     background-color: rgb(20, 29, 47);
     color: white;
-    position: relative;
 }
 
 header {
@@ -136,14 +135,10 @@ section {
 }
 
 .left-side-red-color {
-    width: 40%;
-    height: 45%;
-    background-image: url('../../assets/img/side-colors/red3-footer.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 5215px;
+    height: 40%;
 }
 
 .button-disabled {

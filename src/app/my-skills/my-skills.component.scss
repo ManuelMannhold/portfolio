@@ -12,14 +12,13 @@ section {
     display: flex;
     align-items: center;
     max-width: 1440px;
-    position: relative;
 }
 
 .left {
     width: 50%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(115px, 100px));
-    gap: 40px;
+    gap: 20px;
     z-index: 100;
 
     img:hover {
@@ -67,11 +66,8 @@ section {
 }
 
 .orange {
-    background-image: url('../../assets/img/side-colors/orange1.png');
-    background-repeat: no-repeat;
     position: absolute;
     left: 0;
-    top: 15%;
 }
 
 @media(max-width: 900px) {
