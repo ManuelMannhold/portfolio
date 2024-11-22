@@ -20,9 +20,6 @@
     width: 50%;
 
     .profil-image {
-        width: 42%;
-        position: absolute;
-        left: 47px;
         z-index: 1;
         background-image: url('../../../src/assets/img/side-colors/background-profil-image.png');
         background-repeat: no-repeat;
@@ -43,7 +40,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 106px;
     padding-right: 100px;
 
     a {
@@ -77,8 +73,9 @@
 .vector {
     z-index: 100;
     position: absolute;
-    bottom: -420px;
+    bottom: -120px;
     overflow: hidden;
+    height: 100%;
 }
 
 .scroll-down {
@@ -158,15 +155,10 @@
         z-index: 1020;
         width: 100%;
         flex: 1;
-        padding-top: 200px;
 
         div {
             width: unset;
         }
-    }
-
-    .vector {
-        bottom: -325px;
     }
 
     .scroll-down {
@@ -275,64 +267,22 @@
 
 /*<-----------height------------->*/
 
-@media(height > 1300px) {
-    .vector {
-        bottom: -215px;
-    }
-}
-
-@media(min-height: 1130px) {
-    .vector {
-        bottom: -210px;
-    }
-}
-
-@media(max-height: 950px) {
-    .vector {
-        bottom: -440px;
-    }
-
-    .profil-info {
-        padding-top: 300px;
-    }
-}
-
-@media(max-height: 840px) {
-    .vector {
-        bottom: -458px;
-    }
-
+@media(max-height: 840px) and (max-width: 1230px) {
     .profil {
-
+        height: 60%;
         img{
             left: unset!important;
-            width: 80%!important;
+            height: 100%;
         }
     }
 
-    .profil-info {
-        padding-top: 270px;
-    }
-}
-
-@media(max-height: 740px) {
     .vector {
-        bottom: -446px;
-    }
-
-    .profil-info {
-        padding-top: 210px;
+        bottom: 0;
     }
 }
 
 @media(max-height: 670px) {
-    .vector {
-        bottom: -535px;
-    }
-
     .profil-info {
-        padding-top: 210px;
-
         a {
 
             button {
@@ -349,10 +299,8 @@
             width: 80%!important;
         }
     }
-}
 
-@media(max-height: 620px) {
-    .profil-info {
-        padding-top: 160px;
+    .vector {
+        bottom: 40px;
     }
 }
