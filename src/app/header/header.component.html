@@ -3,10 +3,14 @@
         <span>
             <h3>Manuel</h3>
         </span>
+        <div>
+            <button (click)="changeLanguage('de')">Deutsch</button>
+            <button (click)="changeLanguage('en')">Englisch</button>
+        </div>
         <span class="links">
-            <a href="#about-me-anchor">Über mich</a>
-            <a href="#my-skill-anchor">Skills</a>
-            <a href="#portfolio-anchor">Portfolio</a>
+            <a href="#about-me-anchor" id="about">Über mich</a>
+            <a href="#my-skill-anchor" id="skill">Skills</a>
+            <a href="#portfolio-anchor" id="portfolio">Portfolio</a>
         </span>
         <div id="responsive-menu-button" class="d-none" (click)="openResponsiveMenu()">
             <img src="../../assets/img/responsive_menu.png" alt="">

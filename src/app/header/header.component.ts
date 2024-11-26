@@ -1,5 +1,24 @@
 import { Component } from '@angular/core';
 
+type Translations = {
+  [language: string]: {
+    [key: string]: string;
+  };
+};
+
+const translate: Translations = {
+  de: {
+    about: "Über mich",
+    skill: "Fähigkeiten",
+    portfolio: "Portfolio",
+  },
+  en: {
+    about: "About me",
+    skill: "Skills",
+    portfolioi: "Portfolio",
+  },
+};
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -11,6 +30,15 @@ export class HeaderComponent {
 
   constructor() {
     this.closeResponsiveMenu();
+  }
+
+  changeLanguage(language: string) {
+    Object.keys(translate[language]).forEach((key: string) => {
+      const element = document.getElementById(key);
+      if (element) {
+        element.textContent = translate[language][key];
+      }
+    });
   }
 
   /**
