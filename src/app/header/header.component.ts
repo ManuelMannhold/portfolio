@@ -1,22 +1,16 @@
 import { Component } from '@angular/core';
 
-type Translations = {
-  [language: string]: {
-    [key: string]: string;
-  };
-};
-
-const translate: Translations = {
+const translate = {
   de: {
-    about: "Über mich",
-    skill: "Fähigkeiten",
-    portfolio: "Portfolio",
+    "about": "Über mich",
+    "skill": "Fähigkeiten",
+    "portfolio": "Portfolio"
   },
   en: {
-    about: "About me",
-    skill: "Skills",
-    portfolioi: "Portfolio",
-  },
+    "about": "About me",
+    "skill": "Skills",
+    "portfolioi": "Portfolio" 
+  }
 };
 
 @Component({
@@ -27,19 +21,20 @@ const translate: Translations = {
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  
 
   constructor() {
     this.closeResponsiveMenu();
   }
 
-  changeLanguage(language: string) {
-    Object.keys(translate[language]).forEach((key: string) => {
-      const element = document.getElementById(key);
-      if (element) {
-        element.textContent = translate[language][key];
-      }
-    });
-  }
+changeLanguage(language: keyof typeof translate) {
+  Object.keys(translate[language]).forEach(key => {
+    const element = document.getElementById(key);
+    if (element) {
+      element.textContent = translate[language][key as keyof typeof translate[typeof language]];
+    }
+  });
+}
 
   /**
  * Opens the responsive menu by changing its transform style.
