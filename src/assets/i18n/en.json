@@ -1,0 +1,13 @@
+{
+    "header": {
+        "aboutMe": "About me",
+        "skill": "Skills",
+        "project": "Portfolio"
+    },
+    "landing": {
+        "iam": "I Am",
+        "developer": "Frontend Developer",
+        "talk": "Let us Talk",
+        "scroll": "Scroll down"
+    }
+}

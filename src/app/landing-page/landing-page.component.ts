@@ -1,21 +1,15 @@
-import { Component } from '@angular/core';
-
-const translate = {
-  de: {
-    "Iam": "Ich bin",
-  },
-  en: {
-    "Iam": "I am"
-  }
-};
+import { Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
 })
+
+
 
 // changeLanguage(language: string) {
 //   if (""]) {
@@ -29,6 +23,6 @@ const translate = {
 // }
 
 export class LandingPageComponent {
-
+  private translateService = inject(TranslateService);
 }
 

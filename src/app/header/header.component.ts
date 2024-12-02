@@ -1,40 +1,45 @@
-import { Component } from '@angular/core';
+import { NgClass } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
-const translate = {
-  de: {
-    "about": "Über mich",
-    "skill": "Fähigkeiten",
-    "portfolio": "Portfolio"
-  },
-  en: {
-    "about": "About me",
-    "skill": "Skills",
-    "portfolioi": "Portfolio" 
-  }
-};
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule, NgClass],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  
+  currentLanguage:string = 'en';
+  private translateService = inject(TranslateService);
+
+  english: boolean = true;
 
   constructor() {
-    this.closeResponsiveMenu();
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage) {
+      this.currentLanguage = savedLanguage;
+      this.english = savedLanguage === 'en';
+      this.translateService.use(this.currentLanguage);
+    }
   }
 
-changeLanguage(language: keyof typeof translate) {
-  Object.keys(translate[language]).forEach(key => {
-    const element = document.getElementById(key);
-    if (element) {
-      element.textContent = translate[language][key as keyof typeof translate[typeof language]];
+  changeLanguage() {
+    this.toggleLanguage();
+    this.translateService.use(this.currentLanguage);
+  }
+
+  toggleLanguage() {
+    if(this.english) {
+      this.english = false;
+      this.currentLanguage = 'de';
+    } else {
+      this.english = true;
+      this.currentLanguage = 'en';
     }
-  });
-}
+    localStorage.setItem('language', this.currentLanguage);
+  }
 
   /**
  * Opens the responsive menu by changing its transform style.

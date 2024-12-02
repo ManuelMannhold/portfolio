@@ -64,6 +64,22 @@ nav {
 
 }
 
+.german {
+    background-image: url('../../assets/img/german-flag.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10%;
+    height: 50%;
+}
+
+.english {
+    background-image: url('../../assets/img/england-flag.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 10%;
+    height: 50%;
+}
+
 .links {
     display: flex;
     gap: 46px;
