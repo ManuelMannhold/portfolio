@@ -33,59 +33,7 @@ footer {
 
 /*<-----------imprint-------------->*/
 
-#imprint-container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(20, 29, 47);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    color: white;
-    z-index: 40000;
-    text-shadow: 1px 1px 5px black;
-}
 
-.adress {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 40px;
-    pointer-events: none;
-
-    h1 {
-        font-size: 90px;
-        text-decoration: underline;
-        text-decoration-thickness: 4px;
-        text-underline-offset: 16px;
-    }
-}
-
-.my-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    font-size: 32px;
-}
-
-#close-imprint {
-    position: absolute;
-    right: 40px;
-    top: 40px;
-
-    img {
-        width: 60px;
-        height: 60px;
-        cursor: pointer;
-        box-shadow: 1px 1px 15px white;
-        border-radius: 50%;
-    }
-}
 
 @media(max-width: 1450px) {
     footer {

@@ -9,5 +9,33 @@
         "developer": "Frontend Developer",
         "talk": "Let us Talk",
         "scroll": "Scroll down"
-    }
+    },
+    "aboutme": {
+        "aboutme": "About me",
+        "story": "I have always been fascinated by IT, especially programming. I am currently working as a machine and plant operator, but I am looking forward to shaping my professional future in the IT industry. At the Developer Academy I learned programming in JavaScript and later expanded my knowledge of TypeScript and Angular. Through practical projects that were carried out both individually and in a team, I was able to gain my first valuable insights into the world of programming.",
+        "newtask": "I am open-minded and always looking for personal challenges in order to constantly expand my knowledge.",
+        "job": "In my job, programming isn't just about writing code; it is a creative form of problem solving. I pride myself on transforming complex technical challenges into simple, user-friendly solutions. This is how I help you achieve your goals and bring your visions to life."
+    },
+    "myskills": {
+        "skill": "My skills",
+        "projects": "I have expanded my frontend development skills which have enabled me to create various real-world projects."
+    },
+    "portfolio": {
+        "examples": "Here are a few examples of my projects that I have programmed independently or in group work.",
+        "join": "A task manager inspired by the Kanban system. Create and organize individual tasks using the drag and drop function.",
+        "pollo": "A game written with Javascript in Object Oriented Programming"
+    },
+    "testimonials": [{
+        "author": "Ina Penner",
+        "text": "Manuel showed great commitment to the implementation of our web application in our collaboration. At work, he was always willing to contribute his expertise, supporting the team with innovative approaches and actively supporting team members when they encountered challenges. His skills and team orientation made him a valuable addition to our team."
+    }, 
+    {
+        "author": "Miriam Fuchs",
+        "text": "I had the opportunity to work with Manuel on a project and he was particularly impressed by his expertise and creativity. I particularly appreciate his ability to carry out tasks efficiently and bring in new ideas. He responds openly to suggestions and shows a high degree of flexibility, which made the collaboration very dynamic. Manuel integrated well into the team and contributed to the good working atmosphere with his positive attitude."
+    }, 
+    {
+        "author": "Christopher Hampel",
+        "text": "The collaboration in our team project with Manuel Mannhold worked very well at all times. Thanks to his in-depth knowledge of web development, he was a key factor in the success of our software project. I would especially like to emphasize his willingness to help other team members with questions and problems."
+    }]
+    
 }
