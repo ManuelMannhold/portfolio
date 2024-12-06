@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { ImprintComponent } from '../imprint/imprint.component';
+import { Routes } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [ImprintComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  
   constructor() {
     
   }

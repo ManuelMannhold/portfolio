@@ -18,7 +18,8 @@
     },
     "myskills": {
         "skill": "Meine Fähigkeiten",
-        "projects": "Ich habe meine Frontend-Entwicklungsfähigkeiten erweitert, die es mir ermöglicht haben, verschiedene reale Projekte zu erstellen."
+        "projects": "Ich habe meine Frontend-Entwicklungsfähigkeiten erweitert, die es mir ermöglicht haben, verschiedene reale Projekte zu erstellen.",
+        "contact": "Kontakt"
     },
     "portfolio": {
         "examples": "Hier sind ein paar Beispiele meiner Projekte die ich Selbstständig, oder in Gruppenarbeit programmiert habe.",
@@ -36,5 +37,12 @@
     {
         "author": "Christopher Hampel",
         "text": "Die Zusammenarbeit in unserem Teamprojekt mit Manuel Mannhold hat zu jeder Zeit sehr gut funktioniert. Durch seine fundierten Kenntnisse in der Webentwicklung war er ein maßgeblicher Faktor für den Erfolg unseres Softwareprojekts. Vor allem seine Hilfsbereitschaft bei Fragen und Problemen anderer Teammitglieder möchte ich hervorheben."
-    }]
+    },
+    {
+        "contact": {
+            "contactheader": "Kontakt",
+            "questions": "Haben Sie fragen?"
+        }
+    }
+]
 }

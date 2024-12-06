@@ -18,7 +18,8 @@
     },
     "myskills": {
         "skill": "My skills",
-        "projects": "I have expanded my frontend development skills which have enabled me to create various real-world projects."
+        "projects": "I have expanded my frontend development skills which have enabled me to create various real-world projects.",
+        "contact": "Contact"
     },
     "portfolio": {
         "examples": "Here are a few examples of my projects that I have programmed independently or in group work.",
@@ -36,6 +37,13 @@
     {
         "author": "Christopher Hampel",
         "text": "The collaboration in our team project with Manuel Mannhold worked very well at all times. Thanks to his in-depth knowledge of web development, he was a key factor in the success of our software project. I would especially like to emphasize his willingness to help other team members with questions and problems."
-    }]
+    },
+    {
+        "contact": {
+            "contactheader": "Kontakt",
+            "questions": "Haben Sie fragen?"
+        }
+    }
+    ]
     
 }
