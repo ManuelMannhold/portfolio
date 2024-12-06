@@ -1,19 +1,18 @@
-import { Component } from '@angular/core';
-import { ImprintComponent } from '../imprint/imprint.component';
-import { Routes } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ImprintComponent],
+  imports: [TranslateModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  
-  constructor() {
-    
-  }
+
+  constructor() { }
+
+  private translateService = inject(TranslateService);
 
   /**
  * Displays the imprint container when triggered by an event.

@@ -6,7 +6,7 @@
     <div id="member-container">
       <div *ngFor="let testimonial of testimonials; let i = index" [class.active]="i === currentIndex">
         <h3>{{ testimonial.author }}</h3>
-        <p>{{ testimonial.text }}</p>
+        <p>{{ 'testimonials.' + i + '.text' | translate }}</p>
       </div>
     </div>
   

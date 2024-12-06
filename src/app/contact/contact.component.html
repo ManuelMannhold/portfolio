@@ -11,47 +11,46 @@
                     {{'contact.questions' | translate}}
                 </h3>
                 <p>
-                    Kontaktieren Sie mich gerne über das Nachrichtenfeld falls es Fragen oder Anmerkungen gibt
+                    {{'contact.messageme' | translate}}
                 </p>
-                <p>Sie brauchen einen Frontend Developer? <span class="contact-form-contact-bold" id="contact-me-focus"
-                        (click)="contactMe()">Kontaktieren Sie
-                        mich</span></p>
+                <p>{{'contact.frontend' | translate}} <span class="contact-form-contact-bold" id="contact-me-focus"
+                        (click)="contactMe()">{{'contact.contactme' | translate}}</span></p>
             </div>
             <div class="contact-form-input">
                 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                     <div>
                         <label for="input-name"></label>
                         <input #name="ngModel" [(ngModel)]="contactData.name" name="name" type="text" id="input-name"
-                            placeholder="Name" required>
+                            placeholder="{{'contact.addname' | translate}}" required>
                         @if(!name.valid && name.touched && !name.disabled) {
-                        <span id="input-span">Bitte Namen eingeben</span>
+                        <span id="input-span">{{'contact.addname' | translate}}</span>
                         }
                     </div>
                     <div>
                         <label for="input-mail"></label>
                         <input #email="ngModel" [(ngModel)]="contactData.email" name="email" type="email"
-                            id="input-mail" placeholder="Email Adresse" required
+                            id="input-mail" placeholder="{{'contact.placeholdermail' | translate}}" required
                             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                         @if(!email.valid && email.touched && !email.disabled) {
-                        <span id="input-span">Bitte gültige Email eingeben</span>
+                        <span id="input-span">{{'contact.addmail' |translate}}</span>
                         }
                     </div>
                     <div>
                         <label for="input-message"></label>
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="input-message"
-                            rows="5" cols="15" wrap="hard" placeholder="Nachricht" required></textarea>
+                            rows="5" cols="15" wrap="hard" placeholder="{{'contact.placeholdermessage' | translate}}" required></textarea>
                         @if(!message.valid && message.touched && !message.disabled) {
-                        <span id="input-span">Bitte Nachricht eingeben</span>
+                        <span id="input-span">{{'contact.addmessage' | translate}}</span>
                         }
                     </div>
                     <span id="contact-form-policy">
                         <img id="checkbox-image" (click)="toggleImage()"
                             src="{{ showCheckbox ? '../../../../assets/img/checkbox_checked.png' : '../../../../assets/img/checkbox_empty.png'}}">
-                        <p>Ich bin einverstanden eine Email zu senden</p>
+                        <p>{{'contact.accept' | translate}}</p>
                     </span>
                     <div class="send-button-class">
                         <button id="contact-message-send-button" class="button-disabled"
-                            (click)="showOverlayMessageSend()">Nachricht Abschicken</button>
+                            (click)="showOverlayMessageSend()">{{'contact.sendmessage' | translate}}</button>
                     </div>
                 </form>
             </div>
@@ -63,7 +62,7 @@
     <div id="email-alert" class="d-none">
         <div class="email-alert-text">
             <h2>
-                Die Nachricht wurde gesendet
+                {{'contact.messagesend' | translate}}
             </h2>
             <img src="../../assets/img/green-hook.png" alt="">
         </div>
