@@ -21,7 +21,7 @@ import { MainContentComponent } from "./main-content/main-content.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
-  currentLanguage:string = 'en';
+  currentLanguage:string = 'de';
 
   languages = ["en", "de"];
   private translateService = inject(TranslateService);
