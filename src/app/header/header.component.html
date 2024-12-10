@@ -3,12 +3,12 @@
         <span>
             <h3>Manuel</h3>
         </span>
-        <div (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"> {{ currentLanguage === 'en' ? 'Switch to German' : 'Wechsle zu Englisch' }}</div>
         <span class="links">
             <a href="#about-me-anchor">{{'header.aboutMe' | translate}}</a>
             <a href="#my-skill-anchor">{{'header.skill' | translate}}</a>
             <a href="#portfolio-anchor">{{'header.project' | translate}}</a>
         </span>
+        <div (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></div>
         <div id="responsive-menu-button" class="d-none" (click)="openResponsiveMenu()">
             <img src="../../assets/img/responsive_menu.png" alt="">
         </div>

@@ -34,34 +34,6 @@ export class AppComponent implements OnInit{
   changeLanguage(language:string) {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translateService.use(this.currentLanguage);
-    // localStorage.setItem('language', this.currentLanguage);
   }
   title = 'portfolio';
-  
-  /**
- * Attaches an event listener to the "imprint" element to display the imprint component.
- * 
- * The function performs the following:
- * - Finds the element with the ID "imprint" and adds a click event listener to it.
- * - When the "imprint" element is clicked, the "d-none" class is removed from the 
- *   element with the ID "imprint-component", making it visible.
- */
-
-  showImprint() {
-    document.getElementById('imprint')?.addEventListener('click', () => {
-      document.getElementById('imprint-component')?.classList.remove('d-none');
-    });
-  }
-
-  /**
- * Makes the "imprint" element visible by removing the "d-none" class.
- * 
- * The function performs the following:
- * - Finds the element with the ID "imprint".
- * - Removes the "d-none" class from it, making the element visible.
- */
-
-  hideImprint() {
-    document.getElementById('imprint')?.classList.remove('d-none');
-  }
 }

@@ -67,17 +67,19 @@ nav {
 .german {
     background-image: url('../../assets/img/german-flag.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 10%;
-    height: 50%;
+    background-size: contain;
 }
 
 .english {
     background-image: url('../../assets/img/england-flag.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 10%;
-    height: 50%;
+    background-size: contain;
+}
+
+.toggle-language {
+    min-width: 20%;
+    height: 60%;
+    cursor: pointer;
 }
 
 .links {
@@ -85,6 +87,7 @@ nav {
     gap: 46px;
     font-size: 24px;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 @media (max-width: 860px) {
