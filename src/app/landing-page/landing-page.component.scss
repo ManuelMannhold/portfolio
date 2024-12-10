@@ -288,6 +288,33 @@
     }
 }
 
+@media(max-height: 720px) and (max-width: 1230px) {
+    .profil-info {
+        flex-direction: row;
+    }
+
+    .scroll-down {
+        right: 0;
+    }
+}
+
+@media(max-height: 720px) and (max-width: 1020px) {
+    .profil-info {
+        h1 {
+            font-size: 45px;
+        }
+
+        .red-color {
+            font-size: 40px;
+        }
+    }
+
+    .scroll-down {
+        right: 0;
+    }
+}
+
+
 @media(max-height: 670px) {
     .profil-info {
         a {
