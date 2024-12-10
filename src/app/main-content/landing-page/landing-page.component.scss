@@ -21,7 +21,7 @@
 
     .profil-image {
         z-index: 1;
-        background-image: url('../../../src/assets/img/side-colors/background-profil-image.png');
+        background-image: url('../../../../src/assets/img/side-colors/background-profil-image.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% 100%;
@@ -289,10 +289,6 @@
 }
 
 @media(max-height: 720px) and (max-width: 1230px) {
-    .profil-info {
-        flex-direction: row;
-    }
-
     .scroll-down {
         right: 0;
     }

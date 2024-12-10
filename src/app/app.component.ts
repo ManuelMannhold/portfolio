@@ -1,21 +1,22 @@
 import { Component, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { MySkillsComponent } from './my-skills/my-skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
-import { FooterComponent } from './footer/footer.component';
-import { LandingPageComponent } from "./landing-page/landing-page.component";
-import { MemberOpinionsComponent } from './member-opinions/member-opinions.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { AboutMeComponent } from './main-content/about-me/about-me.component';
+import { MySkillsComponent } from './main-content/my-skills/my-skills.component';
+import { PortfolioComponent } from './main-content/portfolio/portfolio.component';
+import { ContactComponent } from './main-content/contact/contact.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { LandingPageComponent } from "./main-content/landing-page/landing-page.component";
+import { MemberOpinionsComponent } from './main-content/member-opinions/member-opinions.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MainContentComponent } from "./main-content/main-content.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TranslateModule, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, MemberOpinionsComponent],
+  imports: [CommonModule, RouterOutlet, TranslateModule, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, MemberOpinionsComponent, MainContentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
