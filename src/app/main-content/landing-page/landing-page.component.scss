@@ -42,6 +42,7 @@
     align-items: center;
     padding-right: 100px;
     z-index: 110;
+    gap: 20px;
 
     a {
         z-index: 1001;
@@ -49,7 +50,7 @@
 
     span p {
         transform: rotate(-90deg);
-        font-size: clamp(2rem, 3vw, 5rem);
+        font-size: clamp(1rem, 3vw, 5rem);
     }
 
     div {
@@ -61,12 +62,12 @@
     .red-color {
         display: block;
         text-transform: uppercase;
-        font-size: clamp(1rem, 4vw, 4rem);
+        font-size: clamp(1rem, 3vw, 4rem);
         color: rgb(255, 71, 71)
     }
 
     h1 {
-        font-size: clamp(2rem, 5vw, 5rem);
+        font-size: clamp(1rem, 4vw, 5rem);
         font-weight: 700;
     }
 }
@@ -265,16 +266,6 @@
 }
 
 @media(max-height: 720px) and (max-width: 1020px) {
-    .profil-info {
-        h1 {
-            font-size: 45px;
-        }
-
-        .red-color {
-            font-size: 40px;
-        }
-    }
-
     .scroll-down {
         right: 0;
     }
