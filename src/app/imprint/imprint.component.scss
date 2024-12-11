@@ -8,21 +8,26 @@
     color: white;
     z-index: 40000;
     text-shadow: 1px 1px 5px black;
-    flex: 1;
+    height: calc(100vh - 400px);
 }
 
 .adress {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 40px;
-    pointer-events: none;
 
     h1 {
-        font-size: 90px;
+        font-size: clamp(2rem, 8vw, 6rem);
         text-decoration: underline;
         text-decoration-thickness: 4px;
         text-underline-offset: 16px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: clamp(2rem, 6vw, 4rem);
+        padding: 5px;
     }
 }
 
@@ -31,13 +36,16 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    font-size: 32px;
+
+     p {
+        font-size: clamp(1rem, 6vw, 4rem);
+     }
 }
 
 #close-imprint {
     position: absolute;
     right: 40px;
-    top: 40px;
+    top: 120px;
 
     img {
         width: 60px;
