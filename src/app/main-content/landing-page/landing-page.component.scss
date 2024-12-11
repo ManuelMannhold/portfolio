@@ -41,6 +41,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-right: 100px;
+    z-index: 110;
 
     a {
         z-index: 1001;
@@ -48,7 +49,7 @@
 
     span p {
         transform: rotate(-90deg);
-        font-size: 42px;
+        font-size: clamp(2rem, 3vw, 5rem);
     }
 
     div {
@@ -60,12 +61,12 @@
     .red-color {
         display: block;
         text-transform: uppercase;
-        font-size: 55px;
+        font-size: clamp(1rem, 4vw, 4rem);
         color: rgb(255, 71, 71)
     }
 
     h1 {
-        font-size: 62px;
+        font-size: clamp(2rem, 5vw, 5rem);
         font-weight: 700;
     }
 }
@@ -156,7 +157,6 @@
         width: 100%;
         flex: 1;
         padding-bottom: 5px;
-        flex-direction: row;
 
         div {
             width: unset;
@@ -187,17 +187,6 @@
             padding-left: 10px;
         }
     }
-
-    .profil-info {
-        span h1,
-        span h2
-        {
-            font-size: 40px;
-        }
-        span p {
-            font-size: 30px
-        }
-    }    
 }
 
 @media(max-width: 740px) {
@@ -217,15 +206,6 @@
 @media (max-width: 605px) {
     .profil-info {
         padding-right: unset;
-
-        span h1,
-        span h2
-        {
-            font-size: 32px;
-        }
-        span p {
-            font-size: 20px;
-        }
     }
 
     .email-adress {
@@ -245,18 +225,6 @@
 @media (max-width: 475px) {
     .profil-info {
         padding-right: unset;
-        
-        span h1
-        {
-            font-size: 22px;
-        }
-
-        span h2 {
-            font-size: 20px;
-        }
-        span p {
-            font-size: 18px;
-        }
     }
 
     .profil {
