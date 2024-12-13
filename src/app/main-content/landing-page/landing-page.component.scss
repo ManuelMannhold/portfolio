@@ -244,7 +244,7 @@
 
 @media(max-height: 840px) and (max-width: 1230px) {
     .profil {
-        height: 60%;
+        height: 40%;
         img{
             left: unset!important;
             height: 100%;
@@ -260,6 +260,12 @@
                 height: 100%;
                 width: 100%;
             }
+    }
+}
+
+@media(max-height: 720px) {
+    .vector {
+        bottom: 0;
     }
 }
 
