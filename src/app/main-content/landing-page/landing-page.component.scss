@@ -266,6 +266,14 @@
 @media(max-height: 720px) {
     .vector {
         bottom: 0;
+        height: 500px;
+    }
+
+    .profil {
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
     }
 }
 
@@ -294,11 +302,9 @@
     }
 }
 
-@media(max-height: 560px) {
-    .profil-info {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: baseline;
+@media(max-height < 600px) {
+    .vector {
+
     }
 }
 

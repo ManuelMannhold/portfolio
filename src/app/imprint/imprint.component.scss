@@ -55,3 +55,24 @@
         border-radius: 50%;
     }
 }
+
+@media(max-height: 720px) {
+    
+    .adress {
+        h1,
+        p
+        {
+            font-size: unset;
+        }
+    }
+
+    .my-contact {
+        p {
+            font-size: unset
+        }
+    }
+
+    #imprint-container {
+        gap: 20px;
+    }
+}
