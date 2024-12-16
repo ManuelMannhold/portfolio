@@ -42,6 +42,9 @@ nav {
     width: 100%;
     max-width: 1440px;
     justify-content: space-between;
+    div {
+        display: flex;
+    }
 }
 
 #responsive-menu-button {
@@ -120,6 +123,10 @@ nav {
     
     #responsive-menu-button {
         display: inline!important;
+    }
+
+    .toggle-language {
+        height: 5%;
     }
 
     nav {
