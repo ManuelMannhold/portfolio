@@ -1,23 +1,26 @@
-    <div>
+<div>
     <nav>
-        <span>
-            <h3>Manuel</h3>
-        </span>
-        <span class="links">
-            <a href="#about-me-anchor">{{'header.aboutMe' | translate}}</a>
-            <a href="#my-skill-anchor">{{'header.skill' | translate}}</a>
-            <a href="#portfolio-anchor">{{'header.project' | translate}}</a>
-        </span>
-        <div (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></div>
-        <div id="responsive-menu-button" class="d-none" (click)="openResponsiveMenu()">
-            <img src="../../assets/img/responsive_menu.png" alt="">
-        </div>
-        <div id="responsive-menu">
-            <div id="close-responsive" (click)="closeResponsiveMenu()">X</div>
-            <a href="#about-me-anchor">Über mich</a>
-            <a href="#my-skill-anchor">Skills</a>
-            <a href="#portfolio-anchor">Portfolio</a>
-            <a href="#contact-anchor">Kontakt</a>
+        <div class="header-container">
+            <span>
+                <h3>Manuel</h3>
+            </span>
+            <span class="links">
+                <a href="#about-me-anchor">{{'header.aboutMe' | translate}}</a>
+                <a href="#my-skill-anchor">{{'header.skill' | translate}}</a>
+                <a href="#portfolio-anchor">{{'header.project' | translate}}</a>
+            </span>
+            <div (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></div>
+            <div id="responsive-menu-button" class="d-none" (click)="openResponsiveMenu()">
+                <img src="../../assets/img/responsive_menu.png" alt="">
+            </div>
+            <div id="responsive-menu">
+                <div id="close-responsive" (click)="closeResponsiveMenu()">X</div>
+                <a href="#about-me-anchor">{{'responsmenu.aboutme' | translate}}</a>
+                <a href="#my-skill-anchor">{{'responsmenu.skill' | translate}}</a>
+                <a href="#portfolio-anchor">{{'responsmenu.portfolio' | translate}}</a>
+                <a href="#contact-anchor">{{'responsmenu.contact' | translate}}</a>
+                <a href="imprint">{{'responsmenu.imprint' | translate}}</a>
+            </div>
         </div>
     </nav>
 </div>

@@ -58,5 +58,12 @@
     },
     "imprint": {
         "imprint": "Imprint"
+    },
+    "responsmenu": {
+        "aboutme": "About me",
+        "skill": "Skills",
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "imprint": "imprint"
     }
 }

@@ -14,6 +14,7 @@
     height: calc(100vh - 109px);
     max-width: 1440px;
     overflow: hidden;
+    margin-top: 109px;
 }
 
 .profil {
@@ -299,12 +300,6 @@
                 height: 60px;
             }
         }
-    }
-}
-
-@media(max-height < 600px) {
-    .vector {
-
     }
 }
 

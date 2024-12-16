@@ -15,22 +15,33 @@
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgb(20, 29, 47);
     color: white;
     height: 109px;
     width: 100%;
-    max-width: 1440px;
     font-family: 'poppins', 'sans-serif';
     padding-right: 100px;
     padding-left: 100px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 5000;
     
 
     span h3 {
         font-size: 60px;
         pointer-events: none;
     }
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-between;
 }
 
 #responsive-menu-button {
