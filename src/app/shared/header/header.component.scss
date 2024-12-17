@@ -19,10 +19,7 @@ nav {
     align-items: center;
     background-color: rgb(20, 29, 47);
     color: white;
-    width: 100%;
     font-family: 'poppins', 'sans-serif';
-    padding-right: 100px;
-    padding-left: 100px;
     position: fixed;
     left: 0;
     right: 0;
@@ -44,6 +41,8 @@ nav {
     align-items: center;
     div {
         display: flex;
+        gap: 20px;
+        width: 40%;
     }
 }
 
@@ -123,6 +122,12 @@ nav {
     
     #responsive-menu-button {
         display: inline!important;
+    }
+
+    .header-container {
+        div {
+            width: unset;
+        }
     }
 
     .toggle-language {
