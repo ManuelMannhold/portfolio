@@ -156,6 +156,8 @@
     .profil {
         width: 100%;
         flex: 1;
+        display: flex;
+        justify-content: center;
     }
 
     .profil-info {
@@ -245,7 +247,7 @@
 
 @media(max-height: 840px) and (max-width: 1230px) {
     .profil {
-        height: 40%;
+        height: 60%;
         img{
             left: unset!important;
             height: 100%;

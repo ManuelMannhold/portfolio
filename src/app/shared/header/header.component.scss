@@ -19,7 +19,6 @@ nav {
     align-items: center;
     background-color: rgb(20, 29, 47);
     color: white;
-    height: 109px;
     width: 100%;
     font-family: 'poppins', 'sans-serif';
     padding-right: 100px;
@@ -29,7 +28,7 @@ nav {
     right: 0;
     top: 0;
     z-index: 5000;
-    
+    height: 109px;
 
     span h3 {
         font-size: 60px;
@@ -42,6 +41,7 @@ nav {
     width: 100%;
     max-width: 1440px;
     justify-content: space-between;
+    align-items: center;
     div {
         display: flex;
     }

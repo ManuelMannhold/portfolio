@@ -9,6 +9,8 @@
     z-index: 40000;
     text-shadow: 1px 1px 5px black;
     height: calc(100vh - 400px);
+    margin-top: 109px;
+    margin-bottom: 20px;
 }
 
 .adress {
@@ -48,10 +50,10 @@
     top: 120px;
 
     img {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
         cursor: pointer;
-        box-shadow: 1px 1px 15px white;
+        box-shadow: 0 0 8px white;
         border-radius: 50%;
     }
 }
