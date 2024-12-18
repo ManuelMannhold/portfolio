@@ -315,6 +315,12 @@
 @media(max-height: 600px) {
     .vector {
         height: 115%;
+        bottom: 0;
+    }
+}
+
+@media(max-height: 600px) and (max-width:1230px) {
+    .vector {
         bottom: -100px;
     }
 }
