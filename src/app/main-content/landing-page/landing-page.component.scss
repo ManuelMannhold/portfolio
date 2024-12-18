@@ -138,6 +138,12 @@
     border: 1px solid green;
 }
 
+@media(max-width: 1230px) and (max-height: 720px) {
+    .vector {
+        bottom: -65px;
+    }
+}
+
 @media(max-width: 1230px) {
     .this-is-me {
         display: flex;
@@ -314,6 +320,10 @@
 @media(max-height: 550px) {
     .vector {
         height: 135%;
+    }
+
+    .scroll-down {
+        right: 0;
     }
 }
 

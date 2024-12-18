@@ -46,6 +46,12 @@ nav {
     }
 }
 
+.header-name-language {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 #responsive-menu-button {
     padding-left: 30px;
     cursor: pointer;
@@ -81,17 +87,20 @@ nav {
     background-image: url('../../../assets/img/german-flag.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 .english {
     background-image: url('../../../assets/img/england-flag.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 .toggle-language {
-    min-width: 10%;
-    height: 40%;
+    min-width: 30%;
+    height: 55px;
+    width: 100px;
     cursor: pointer;
 }
 

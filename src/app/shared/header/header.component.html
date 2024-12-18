@@ -1,8 +1,9 @@
 <div>
     <nav>
         <div class="header-container">
-            <span>
+            <span class="header-name-language">
                 <h3>Manuel</h3>
+                <span (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></span>
             </span>
             <div>
             <span class="links">
@@ -10,13 +11,12 @@
                 <a href="#my-skill-anchor">{{'header.skill' | translate}}</a>
                 <a href="#portfolio-anchor">{{'header.project' | translate}}</a>
             </span>
-            <div (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></div>
         </div>
             <div id="responsive-menu-button" class="d-none" (click)="openResponsiveMenu()">
                 <img src="../../assets/img/responsive_menu.png" alt="">
             </div>
             <div id="responsive-menu">
-                <div (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></div>
+                <span (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></span>
                 <div id="close-responsive" (click)="closeResponsiveMenu()">X</div>
                 <a href="#about-me-anchor">{{'responsmenu.aboutme' | translate}}</a>
                 <a href="#my-skill-anchor">{{'responsmenu.skill' | translate}}</a>
