@@ -51,7 +51,7 @@
 
     span p {
         transform: rotate(-90deg);
-        font-size: clamp(0.7rem, 3vw, 5rem);
+        font-size: clamp(0.7rem, 3vw, 3rem);
     }
 
     div {
@@ -63,12 +63,12 @@
     .red-color {
         display: block;
         text-transform: uppercase;
-        font-size: clamp(1rem, 3vw, 4rem);
+        font-size: clamp(1rem, 3vw, 3rem);
         color: rgb(255, 71, 71)
     }
 
     h1 {
-        font-size: clamp(1rem, 4vw, 5rem);
+        font-size: clamp(1rem, 4vw, 4rem);
         font-weight: 700;
     }
 }
