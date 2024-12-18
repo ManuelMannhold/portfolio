@@ -85,6 +85,12 @@ a {
     cursor: pointer;
 }
 
+@media(max-height: 560px) {
+    body {
+        display: unset;
+    }
+}
+
 
 @media(max-width: 1200px) {
     * {

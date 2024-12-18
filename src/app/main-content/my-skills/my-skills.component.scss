@@ -41,7 +41,7 @@ section {
         width: 100%;
 
         h2 {
-            font-size: 90px;
+            font-size: clamp(2rem, 6vw, 4rem);
             color: white;
             font-weight: 700;
         }
@@ -115,9 +115,6 @@ section {
         header {
             justify-content: flex-end;
             gap: 20px;
-            h2 {
-                font-size: 80px;
-            }
     }
 
     }
@@ -130,14 +127,6 @@ section {
 }
 
 @media(max-width: 600px) {
-    .right {
-        header {
-            h2 {
-                font-size: 70px;
-            }
-        }
-    }
-
     .my-skills-container {
 
         section {
@@ -154,11 +143,6 @@ section {
     }
 
     .right {
-        header {
-            h2 {
-                font-size: 45px;
-            }
-        }
         p {
             text-align: center;
             padding-right: unset;

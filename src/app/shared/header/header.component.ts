@@ -11,7 +11,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  currentLanguage:string = 'en';
+  currentLanguage: string = 'en';
   private translateService = inject(TranslateService);
 
   english: boolean = true;
@@ -31,7 +31,7 @@ export class HeaderComponent {
   }
 
   toggleLanguage() {
-    if(this.english) {
+    if (this.english) {
       this.english = false;
       this.currentLanguage = 'de';
     } else {
@@ -55,9 +55,9 @@ export class HeaderComponent {
  */
 
   openResponsiveMenu() {
-    let openMenu:HTMLElement | null = document.getElementById('responsive-menu');
-    if(openMenu) 
-    openMenu.style.transform = 'translate(0)';
+    let openMenu: HTMLElement | null = document.getElementById('responsive-menu');
+    if (openMenu)
+      openMenu.style.transform = 'translate(0)';
   }
 
   /**
@@ -75,8 +75,7 @@ export class HeaderComponent {
 
   closeResponsiveMenu() {
     let responsMenu = document.getElementById('responsive-menu');
-    if(responsMenu) 
-    responsMenu.style.transform = 'translate(10000px)';
+    if (responsMenu)
+      responsMenu.style.transform = 'translate(10000px)';
   }
-
 }

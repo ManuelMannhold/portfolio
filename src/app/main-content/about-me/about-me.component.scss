@@ -18,8 +18,7 @@
 
         h2 {
             color: white;
-            font-size: 70px;
-            font-size: 90px;
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 700;
         }
     }
@@ -158,10 +157,6 @@ section {
         header {
             height: unset;
             padding-left: unset;
-
-            h2 {
-                font-size: 70px;
-            }
         }
     }
 
@@ -183,10 +178,6 @@ section {
 
         header {
             text-align: left;
-
-            h2 {
-                font-size: 45px;
-            }
         }
     }
 
@@ -196,7 +187,6 @@ section {
 
         h2 {
             line-height: 80px;
-            font-size: 45px;
             text-align: center;
         }
     }
