@@ -66,5 +66,29 @@
         "portfolio": "Portfolio",
         "contact": "Kontakt",
         "imprint": "Impressum"
+    },
+    "policy": {
+        "policy": "Privacy Policy",
+        "subheader": "Wir legen großen Wert auf den Schutz Ihrer persönlichen Daten. In dieser Datenschutzrichtlinie erfahren Sie, wie wir Ihre Daten erheben, speichern und nutzen.",
+        "introduction": "Einleitung",
+        "subintro": "Wir erheben Daten wie Name, E-Mail-Adresse und Telefonnummer.",
+        "introductiontext": "Erfasste Daten: Diese Daten werden genutzt, um unsere Dienstleistungen anzubieten und zu verbessern. Verwendungszweck: Ihre Daten werden vertraulich behandelt und niemals ohne Ihre Zustimmung weitergegeben. Schutzmaßnahmen: Wir setzen moderne Sicherheitsmaßnahmen ein, um Ihre Daten vor unbefugtem Zugriff zu schützen.",
+        "datarecord": "Welche Daten werden erfasst?",
+        "datasub": "Nutzer haben das Recht, ihre Daten einzusehen, zu ändern oder löschen zu lassen.",
+        "data": "Sie können jederzeit eine Kopie Ihrer gespeicherten Daten anfordern. Alle Daten werden gemäß den geltenden Datenschutzgesetzen gespeichert. Wir bieten volle Transparenz über die Nutzung Ihrer Daten.",
+        "datausedhead": "Wie werden die Daten verwendet?",
+        "datausedsub": "Sie können Änderungen oder Löschungen Ihrer Daten über unsere Kontaktinformationen anfordern.",
+        "dataused": "Unsere Datenschutzmaßnahmen entsprechen den höchsten Standards. Sie haben das Recht, eine Beschwerde bei den Datenschutzbehörden einzureichen. Alle Anfragen zu Datenschutzangelegenheiten werden innerhalb von 30 Tagen bearbeitet.",
+        "datasafety": "Wie werden die Daten geschützt?",
+        "datasafetysub": "Unsere Datenschutzmaßnahmen werden regelmäßig überprüft und aktualisiert.",
+        "rightshead": "Rechte der Nutzer",
+        "rightssub": "Wir behalten uns das Recht vor, diese Richtlinie jederzeit zu ändern.",
+        "rights": "Rechte der Nutzer: Für weitere Informationen kontaktieren Sie uns bitte per E-Mail. Beschwerderecht: Sie können uns auch per Post oder telefonisch erreichen. Zugriffsrechte: Unsere vollständigen Kontaktinformationen finden Sie unten. Datenlöschung:Alle Änderungen werden auf dieser Seite veröffentlicht.",
+        "rightsend": "Vielen Dank für Ihr Vertrauen.",
+        "directivehead": "Änderungen an der Richtlinie",
+        "directive": "Diese Datenschutzrichtlinie tritt am 15.12.2024 in Kraft.",
+        "contactinfohead": "Kontaktinformationen",
+        "contactssub": "Falls Sie Fragen zu dieser Richtlinie haben, kontaktieren Sie uns bitte.",
+        
     }
 }
