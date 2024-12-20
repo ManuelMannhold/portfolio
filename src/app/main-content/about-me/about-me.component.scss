@@ -195,3 +195,9 @@ section {
         padding-right: unset;
     }
 }
+
+@media(min-height: 1000px) {
+    section {
+        height: unset;
+    }
+}
