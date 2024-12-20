@@ -6,7 +6,7 @@ import { LandingPageComponent } from './main-content/landing-page/landing-page.c
 
 
 export const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent  },
   { path: 'imprint', component: ImprintComponent },
   { path: 'main-content', component: MainContentComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent }

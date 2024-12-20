@@ -122,12 +122,18 @@ input:-webkit-autofill:active  {
 
 #contact-form-policy {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 
     #checkbox-image {
         cursor: pointer;
         max-width: 20px;
         max-height: 20px;
+    }
+
+    a {
+        text-decoration: underline;
     }
 }
 
