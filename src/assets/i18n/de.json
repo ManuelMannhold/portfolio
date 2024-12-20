@@ -70,16 +70,16 @@
     "policy": {
         "policy": "Privacy Policy",
         "subheader": "Wir legen großen Wert auf den Schutz Ihrer persönlichen Daten. In dieser Datenschutzrichtlinie erfahren Sie, wie wir Ihre Daten erheben, speichern und nutzen.",
-        "introduction": "Einleitung",
+        "introductionheader": "Einleitung",
         "subintro": "Wir erheben Daten wie Name, E-Mail-Adresse und Telefonnummer.",
         "introductiontext": "Erfasste Daten: Diese Daten werden genutzt, um unsere Dienstleistungen anzubieten und zu verbessern. Verwendungszweck: Ihre Daten werden vertraulich behandelt und niemals ohne Ihre Zustimmung weitergegeben. Schutzmaßnahmen: Wir setzen moderne Sicherheitsmaßnahmen ein, um Ihre Daten vor unbefugtem Zugriff zu schützen.",
-        "datarecord": "Welche Daten werden erfasst?",
+        "datarecordheader": "Welche Daten werden erfasst?",
         "datasub": "Nutzer haben das Recht, ihre Daten einzusehen, zu ändern oder löschen zu lassen.",
         "data": "Sie können jederzeit eine Kopie Ihrer gespeicherten Daten anfordern. Alle Daten werden gemäß den geltenden Datenschutzgesetzen gespeichert. Wir bieten volle Transparenz über die Nutzung Ihrer Daten.",
         "datausedhead": "Wie werden die Daten verwendet?",
         "datausedsub": "Sie können Änderungen oder Löschungen Ihrer Daten über unsere Kontaktinformationen anfordern.",
         "dataused": "Unsere Datenschutzmaßnahmen entsprechen den höchsten Standards. Sie haben das Recht, eine Beschwerde bei den Datenschutzbehörden einzureichen. Alle Anfragen zu Datenschutzangelegenheiten werden innerhalb von 30 Tagen bearbeitet.",
-        "datasafety": "Wie werden die Daten geschützt?",
+        "datasafetyheader": "Wie werden die Daten geschützt?",
         "datasafetysub": "Unsere Datenschutzmaßnahmen werden regelmäßig überprüft und aktualisiert.",
         "rightshead": "Rechte der Nutzer",
         "rightssub": "Wir behalten uns das Recht vor, diese Richtlinie jederzeit zu ändern.",
@@ -89,6 +89,9 @@
         "directive": "Diese Datenschutzrichtlinie tritt am 15.12.2024 in Kraft.",
         "contactinfohead": "Kontaktinformationen",
         "contactssub": "Falls Sie Fragen zu dieser Richtlinie haben, kontaktieren Sie uns bitte.",
-        
+        "contact": "Kontakt: Manuel.Mannhold@gmx.de Addresse: Paul-Schreier-Straße 26, 16761 Hennigsdorf Telefon: 0176 83168535",
+        "remarksheader": "Concluding remarks",
+        "remarks": "Ich hoffen, dass diese Datenschutzrichtlinie alle Ihre Fragen beantwortet.",
+        "rigtsreserved": "© 2024 Manuel Mannhold. Alle Rechte vorbehalten."
     }
 }
