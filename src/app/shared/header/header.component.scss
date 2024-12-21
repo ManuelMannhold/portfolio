@@ -49,9 +49,11 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 220px;
         a {
             width: 220px;
+        }
+        img {
+            width: 100%;
         }
 }
 
@@ -130,6 +132,12 @@ nav {
             width: unset;
             padding-left: 10px;
         }
+    }
+}
+
+@media(max-width: 800px) {
+    .header-name-language {
+        width: 300px;
     }
 }
 

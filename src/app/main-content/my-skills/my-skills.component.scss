@@ -67,7 +67,7 @@ section {
 
 .orange {
     position: absolute;
-    left: 0;
+    left: -40px;
 }
 
 @media(max-width: 900px) {
@@ -138,7 +138,6 @@ section {
 
 @media (max-width: 460px) {
     #my-skill-anchor {
-        padding-right: 20px;
         text-align: center;
     }
 

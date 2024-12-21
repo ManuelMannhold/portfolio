@@ -253,6 +253,12 @@
 
 /*<-----------height------------->*/
 
+@media(min-height: 1000px) {
+    .this-is-me {
+        height: 70vh;
+    }
+}
+
 @media(max-height: 840px) and (max-width: 1230px) {
     .profil {
         height: 50%;

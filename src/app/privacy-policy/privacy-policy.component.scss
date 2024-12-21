@@ -11,14 +11,19 @@ a {
     text-align: left;
     padding-bottom: 40px;
     max-width: 1440px;
-    padding: 100px 256px 64px;
+    padding: 100px 220px 64px;
 }
 
 h3,
 h1
  {
+    font-size: 32px;
     font-weight: 800;
     text-align: center;
+}
+
+h1 {
+    font-size: 40px;
 }
 
 ul {
@@ -40,5 +45,11 @@ p{
     .container {
         padding-left: 20px;
         padding-right: 20px;
+    }
+}
+
+@media(max-width: 450px) {
+    h3 {
+        font-size: 24px;
     }
 }
