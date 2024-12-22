@@ -111,72 +111,46 @@ export class ContactComponent {
     }
   }
 
-  /**
- * Toggles the state of a checkbox and updates the send button and error message visibility accordingly.
- * 
- * The function performs the following:
- * - Toggles the `showCheckbox` property.
- * - Retrieves the "contact-message-send-button", "input-name", "input-mail", "input-message",
- *   and "error-message-input-fields" elements.
- * - If `showCheckbox` is true:
- *   - Calls the `ifElseSendButtonAddOrRemoveClass` method to update the send button's classes and 
- *     handle the visibility of the error message based on the input fields.
- * - If `showCheckbox` is false:
- *   - Adds the "button-disabled" class to the send button to disable it.
- *
- * @remarks
- * This method assumes that the `ifElseSendButtonAddOrRemoveClass` method exists and handles 
- * the logic for enabling/disabling the send button and managing error messages.
- */
-
   toggleImage() {
     let sendButton: HTMLElement | null = document.getElementById('contact-message-send-button');
     let inputName = document.getElementById('input-name') as HTMLInputElement;
     let inputMail = document.getElementById('input-mail') as HTMLInputElement;
     let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
-    let errorMessage = document.getElementById('error-message-input-fields') as HTMLDivElement;
-
+    let errorMessage = document.getElementById('input-span') as HTMLDivElement;
+  
     this.showCheckbox = !this.showCheckbox;
-
+  
     if (sendButton) {
-      if (this.showCheckbox) {
-        this.ifElseSendButtonAddOrRemoveClass(sendButton, inputName, inputMail, inputMessage, errorMessage);
-      }
-      else {
+      // Aktualisiere die Variable `error` basierend auf der Validierung
+      const error = this.ifElseSendButtonAddOrRemoveClass(inputName, inputMail, inputMessage, errorMessage);
+      
+      if (this.showCheckbox && !error) {
+        sendButton.classList.remove('button-disabled');
+        this.sendMail = true;
+      } else {
         sendButton.classList.add('button-disabled');
       }
     }
   }
-
-  /**
- * Enables or disables the send button based on the values of input fields.
- * 
- * The function performs the following:
- * - Checks if the "input-name", "input-mail", and "input-message" fields all have non-empty values.
- * - If all input fields have values, it:
- *   - Removes the "button-disabled" class from the send button, enabling it.
- *   - Sets the `sendMail` property to `true`.
- * - If any input field is empty, it:
- *   - Adds the "button-disabled" class to the send button, disabling it.
- * 
- * @param {HTMLElement} sendButton - The button element that will be enabled or disabled.
- * @param {HTMLInputElement} inputName - The input element for the user's name.
- * @param {HTMLInputElement} inputMail - The input element for the user's email.
- * @param {HTMLTextAreaElement} inputMessage - The text area element for the user's message.
- * @param {HTMLDivElement} errorMessage - The element that displays an error message (if applicable).
- */
-
-  ifElseSendButtonAddOrRemoveClass(sendButton: HTMLElement, inputName: HTMLInputElement, inputMail: HTMLInputElement, inputMessage: HTMLTextAreaElement, errorMessage: HTMLDivElement) {
-    if (inputName.value !== '' && inputMail.value !== '' && inputMessage.value !== '') {
-      sendButton.classList.remove('button-disabled');
-      this.sendMail = true;
-
-    }
-    else {
-      sendButton.classList.add('button-disabled');
-
+  
+  ifElseSendButtonAddOrRemoveClass(
+    inputName: HTMLInputElement,
+    inputMail: HTMLInputElement,
+    inputMessage: HTMLTextAreaElement,
+    errorMessage: HTMLDivElement
+  ): boolean {
+    if (
+      inputName.value !== '' &&
+      inputMail.value !== '' &&
+      inputMessage.value !== '' &&
+      (!errorMessage || errorMessage.innerText.trim() === '')
+    ) {
+      return false;
+    } else {
+      return true;
     }
   }
+  
 
   /**
  * Displays a temporary overlay message to indicate that the email has been sent.
