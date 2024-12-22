@@ -49,9 +49,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
-        a {
-            width: 220px;
-        }
+
         img {
             width: 100%;
         }
@@ -102,7 +100,7 @@ nav {
 }
 
 .toggle-language {
-    min-width: 30%;
+    min-width: 20%;
     height: 55px;
     width: 100px;
     cursor: pointer;
@@ -148,16 +146,13 @@ nav {
     
     #responsive-menu-button {
         display: inline!important;
+        height: 30px;
     }
 
     .header-container {
         div {
             width: unset;
         }
-    }
-
-    .toggle-language {
-        display: none;
     }
 
     nav {
