@@ -1,6 +1,6 @@
 import { Component, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { AboutMeComponent } from './main-content/about-me/about-me.component';
 import { MySkillsComponent } from './main-content/my-skills/my-skills.component';
@@ -16,7 +16,7 @@ import { MainContentComponent } from "./main-content/main-content.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, TranslateModule, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, MemberOpinionsComponent, MainContentComponent],
+  imports: [RouterLink, RouterOutlet, CommonModule, RouterOutlet, TranslateModule, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, MemberOpinionsComponent, MainContentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

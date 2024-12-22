@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, TranslateModule],
+  imports: [FormsModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
@@ -19,6 +20,7 @@ export class ContactComponent {
   constructor() {
     this.displayErrorMessageForInput();
     this.contactMe();
+    this.toggleImage();
   }
 
   contactData = {
@@ -121,7 +123,6 @@ export class ContactComponent {
     this.showCheckbox = !this.showCheckbox;
   
     if (sendButton) {
-      // Aktualisiere die Variable `error` basierend auf der Validierung
       const error = this.ifElseSendButtonAddOrRemoveClass(inputName, inputMail, inputMessage, errorMessage);
       
       if (this.showCheckbox && !error) {
