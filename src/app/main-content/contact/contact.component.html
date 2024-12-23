@@ -37,15 +37,17 @@
                     <div>
                         <label for="input-message"></label>
                         <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="input-message"
-                            rows="5" cols="15" wrap="hard" placeholder="{{'contact.placeholdermessage' | translate}}" required></textarea>
+                            rows="5" cols="15" wrap="hard" placeholder="{{'contact.placeholdermessage' | translate}}"
+                            required></textarea>
                         @if(!message.valid && message.touched && !message.disabled) {
                         <span id="input-span">{{'contact.addmessage' | translate}}</span>
                         }
                     </div>
                     <span id="contact-form-policy">
                         <img id="checkbox-image" (click)="toggleImage()"
-                            src="{{ showCheckbox ? '../../../../assets/img/checkbox_checked.png' : '../../../../assets/img/checkbox_empty.png'}}">
-                        <p>{{'contact.accept' | translate}}</p><a routerLink="/privacy-policy">{{'contact.policy' | translate}}</a>
+                            src="{{ showCheckbox ? '../../../../assets/img/checkbox_empty.png' : '../../../../assets/img/checkbox_checked.png'}}">
+                        <p>{{'contact.accept' | translate}}</p><a routerLink="/privacy-policy">{{'contact.policy' |
+                            translate}}</a>
                     </span>
                     <div class="send-button-class">
                         <button id="contact-message-send-button" class="button-disabled"

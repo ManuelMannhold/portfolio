@@ -72,7 +72,7 @@ export class ContactComponent {
     }
   }
 
-  showCheckbox!: boolean;
+  showCheckbox: boolean = false;
   sendMail: boolean = false;
 
   /**
@@ -125,7 +125,7 @@ export class ContactComponent {
     if (sendButton) {
       const error = this.ifElseSendButtonAddOrRemoveClass(inputName, inputMail, inputMessage, errorMessage);
       
-      if (this.showCheckbox && !error) {
+      if (!this.showCheckbox && !error) {
         sendButton.classList.remove('button-disabled');
         this.sendMail = true;
       } else {
