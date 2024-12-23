@@ -18,9 +18,7 @@ export class ContactComponent {
   inputName!: HTMLInputElement;
 
   constructor() {
-    this.displayErrorMessageForInput();
     this.contactMe();
-    this.toggleImage();
   }
 
   contactData = {
@@ -88,86 +86,115 @@ export class ContactComponent {
     })
   }
 
+  /** Initializes the component and adds event listeners to inputs. */
+  ngOnInit() {
+    this.addInputEventListeners();
+  }
+
   /**
- * Displays or hides an error message for input fields based on their content.
- * 
- * The function checks if the "input-name", "input-mail", and "input-message" 
- * elements are present and verifies their values:
- * - If any of the input fields are empty, the "input-span" element's 
- *   class "d-none" is removed, making the error message visible.
- * - If all input fields have values, the "d-none" class is added to 
- *   "input-span", hiding the error message.
+ * Toggles the visibility of the checkbox and updates the send button's state
+ * based on input validation.
  */
-
-  displayErrorMessageForInput() {
-    let inputName = document.getElementById('input-name') as HTMLInputElement;
-    let inputMail = document.getElementById('input-mail') as HTMLInputElement;
-    let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
-
-    if (inputName && inputMail && inputMessage) {
-      if (inputName.value === '' || inputMail.value === '' || inputMessage.value === '') {
-        document.getElementById('input-span')?.classList.remove('d-none');
-      } else {
-        document.getElementById('input-span')?.classList.add('d-none');
-      }
-    }
-  }
-
   toggleImage() {
-    let sendButton: HTMLElement | null = document.getElementById('contact-message-send-button');
-    let inputName = document.getElementById('input-name') as HTMLInputElement;
-    let inputMail = document.getElementById('input-mail') as HTMLInputElement;
-    let inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
-    let errorMessage = document.getElementById('input-span') as HTMLDivElement;
-  
     this.showCheckbox = !this.showCheckbox;
-  
-    if (sendButton) {
+
+    const sendButton = document.getElementById('contact-message-send-button') as HTMLElement | null;
+    const inputName = document.getElementById('input-name') as HTMLInputElement;
+    const inputMail = document.getElementById('input-mail') as HTMLInputElement;
+    const inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
+    const errorMessage = document.getElementById('input-span') as HTMLDivElement;
+
+    if (sendButton && inputName && inputMail && inputMessage) {
       const error = this.ifElseSendButtonAddOrRemoveClass(inputName, inputMail, inputMessage, errorMessage);
-      
-      if (!this.showCheckbox && !error) {
-        sendButton.classList.remove('button-disabled');
-        this.sendMail = true;
-      } else {
-        sendButton.classList.add('button-disabled');
-      }
+      this.checkInput(sendButton, error);
     }
   }
-  
+
+  /**
+ * Adds event listeners to input fields for real-time validation and updates 
+ * the send button's state accordingly.
+ */
+  addInputEventListeners() {
+    const inputName = document.getElementById('input-name') as HTMLInputElement;
+    const inputMail = document.getElementById('input-mail') as HTMLInputElement;
+    const inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
+    const sendButton = document.getElementById('contact-message-send-button') as HTMLElement;
+    const errorMessage = document.getElementById('input-span') as HTMLDivElement;
+
+    this.showCheckbox = !this.showCheckbox;
+
+    if (inputName && inputMail && inputMessage && sendButton) {
+      const handleInputChange = () => {
+        const error = this.ifElseSendButtonAddOrRemoveClass(inputName, inputMail, inputMessage, errorMessage);
+        if (error) {
+          errorMessage?.classList.remove('d-none');
+        } else {
+          errorMessage?.classList.add('d-none');
+        }
+        this.checkInput(sendButton, error);
+      };
+
+      inputName.addEventListener('input', handleInputChange);
+      inputMail.addEventListener('input', handleInputChange);
+      inputMessage.addEventListener('input', handleInputChange);
+    }
+  }
+
+  /**
+ * Validates the input fields and checks if there are any errors.
+ * Returns `true` if there are validation errors, otherwise `false`.
+ *
+ * @param {HTMLInputElement} inputName - The name input field.
+ * @param {HTMLInputElement} inputMail - The email input field.
+ * @param {HTMLTextAreaElement} inputMessage - The message textarea field.
+ * @param {HTMLDivElement} errorMessage - The element displaying error messages.
+ * @returns {boolean} - Returns `true` if there are validation errors, `false` otherwise.
+ */
   ifElseSendButtonAddOrRemoveClass(
     inputName: HTMLInputElement,
     inputMail: HTMLInputElement,
     inputMessage: HTMLTextAreaElement,
     errorMessage: HTMLDivElement
   ): boolean {
-    if (
-      inputName.value !== '' &&
-      inputMail.value !== '' &&
-      inputMessage.value !== '' &&
-      (!errorMessage || errorMessage.innerText.trim() === '')
-    ) {
-      return false;
-    } else {
-      return true;
-    }
+    return (
+      inputName.value.trim() === '' ||
+      !this.isValidEmail(inputMail.value.trim()) ||
+      inputMessage.value.trim() === '' ||
+      (errorMessage && errorMessage.innerText.trim() !== '')
+    );
   }
-  
 
   /**
- * Displays a temporary overlay message to indicate that the email has been sent.
- * 
- * The function performs the following:
- * - Checks if the `sendMail` property is `true`:
- *   - If true, it shows the "email-alert" element by removing the "d-none" class and adding the "no-scroll" class.
- *   - After 2 seconds, the overlay is hidden again by adding the "d-none" class and removing the "no-scroll" class.
- *   - Disables the send button by adding the "button-disabled" class.
- *   - Calls `toggleImage` to update the UI state (e.g., toggling checkbox or button visibility).
- *   - Sets the `sendMail` property back to `false` to indicate that the sending process is complete.
- * 
- * @remarks
- * This method assumes that there is an element with the ID "email-alert" to display the overlay message.
+ * Validates an email address using a regular expression.
+ *
+ * @param {string} email - The email address to validate.
+ * @returns {boolean} - Returns `true` if the email is valid, `false` otherwise.
  */
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return emailRegex.test(email);
+  }
 
+  /**
+ * Enables or disables the send button based on input validation and checkbox state.
+ *
+ * @param {HTMLElement} sendButton - The send button element to enable/disable.
+ * @param {boolean} error - Indicates whether there is a validation error.
+ */
+  checkInput(sendButton: HTMLElement, error: boolean) {
+    if (!this.showCheckbox && !error) {
+      sendButton.classList.remove('button-disabled');
+      this.sendMail = true;
+    } else {
+      sendButton.classList.add('button-disabled');
+      this.sendMail = false;
+    }
+  }
+
+  /**
+  * Displays a temporary email alert message and disables the send button 
+  * after a successful message submission.
+  */
   showOverlayMessageSend() {
     const emailAlert = document.getElementById('email-alert');
 
@@ -181,7 +208,7 @@ export class ContactComponent {
       }, 2000);
       this.sendMail = false;
       document.getElementById('contact-message-send-button')?.classList.add('button-disabled');
-      this.toggleImage();
+      this.showCheckbox = !this.showCheckbox;
     }
   }
 }
