@@ -14,19 +14,25 @@
     max-width: 1440px;
 }
 
+h1 {
+    font-size: clamp(2rem, 8vw, 6rem);
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
 .adress {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    h1 {
-        font-size: clamp(2rem, 8vw, 5rem);
+    h2 {
+        font-size: clamp(2rem, 6vw, 4rem);
         text-align: center;
     }
 
     p {
         text-align: center;
-        font-size: clamp(2rem, 6vw, 3rem);
+        font-size: clamp(2rem, 5vw, 2rem);
         padding: 5px;
     }
 }
@@ -38,22 +44,8 @@
     gap: 10px;
 
      p {
-        font-size: clamp(1rem, 6vw, 3rem);
+        font-size: clamp(1rem, 5vw, 2rem);
      }
-}
-
-#close-imprint {
-    position: absolute;
-    right: 40px;
-    top: 120px;
-
-    img {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        box-shadow: 0 0 8px white;
-        border-radius: 50%;
-    }
 }
 
 @media(max-height: 720px) {
