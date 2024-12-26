@@ -24,10 +24,19 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: rgb(20, 29, 47);
+}
+
+app-landing-page,
+app-about-me,
+app-my-skills,
+app-portfolio,
+app-contact,
+app-imprint,
+app-privacy-policy
+{
+    display: flex;
+    justify-content: center;
 }
 
 #content {

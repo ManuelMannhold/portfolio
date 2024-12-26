@@ -6,11 +6,12 @@
     justify-content: center;
     gap: 80px;
     color: white;
-    z-index: 40000;
     text-shadow: 1px 1px 5px black;
     height: calc(100vh - 400px);
     margin-top: 109px;
     margin-bottom: 20px;
+    width: 100vw;
+    max-width: 1440px;
 }
 
 .adress {
@@ -19,13 +20,13 @@
     align-items: center;
 
     h1 {
-        font-size: clamp(2rem, 8vw, 6rem);
+        font-size: clamp(2rem, 8vw, 5rem);
         text-align: center;
     }
 
     p {
         text-align: center;
-        font-size: clamp(2rem, 6vw, 4rem);
+        font-size: clamp(2rem, 6vw, 3rem);
         padding: 5px;
     }
 }
@@ -37,7 +38,7 @@
     gap: 10px;
 
      p {
-        font-size: clamp(1rem, 6vw, 4rem);
+        font-size: clamp(1rem, 6vw, 3rem);
      }
 }
 
