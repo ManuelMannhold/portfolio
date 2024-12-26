@@ -58,7 +58,7 @@
         "placeholdermail": "Enter Mail....."
     },
     "imprint": {
-        "imprint": "Imprint"
+       "imprint": "Imprint"
     },
     "responsmenu": {
         "aboutme": "About me",
@@ -104,5 +104,8 @@
         "remarksheader": "Concluding remarks",
         "remarks": "I hope that this privacy policy answers all your questions.",
         "rigtsreserved": "© 2024 Manuel Mannhold. All rights reserved."
+    }, 
+    "footer": {
+        "imprint": "Imprint"
     }
 }

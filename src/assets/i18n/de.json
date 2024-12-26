@@ -104,5 +104,8 @@
         "remarksheader": "Schlussbemerkungen",
         "remarks": "Ich hoffen, dass diese Datenschutzrichtlinie alle Ihre Fragen beantwortet.",
         "rigtsreserved": "© 2024 Manuel Mannhold. Alle Rechte vorbehalten."
+    }, 
+    "footer": {
+        "imprint": "Impressum"
     }
 }
