@@ -36,14 +36,6 @@ footer {
 
 /*<-----------imprint-------------->*/
 
-
-
-@media(max-width: 1450px) {
-    footer {
-        width: unset;
-    }
-}
-
 @media(max-width: 900px) {
     footer {
         flex-direction: column;
