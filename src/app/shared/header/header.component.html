@@ -3,15 +3,15 @@
         <div class="header-container">
             <span class="header-name-language">
                 <a routerLink="main-content"><img src="../../../assets/img/manuel_logo_white_and_orange.png" alt=""></a>
-                <span (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></span>
             </span>
+            <span (click)="changeLanguage()" [ngClass]="english ? 'english' : 'german'" class="toggle-language"></span>
             <div>
-            <span class="links">
-                <a href="#about-me-anchor">{{'header.aboutMe' | translate}}</a>
-                <a href="#my-skill-anchor">{{'header.skill' | translate}}</a>
-                <a href="#portfolio-anchor">{{'header.project' | translate}}</a>
-            </span>
-        </div>
+                <span class="links">
+                    <a href="#about-me-anchor">{{'header.aboutMe' | translate}}</a>
+                    <a href="#my-skill-anchor">{{'header.skill' | translate}}</a>
+                    <a href="#portfolio-anchor">{{'header.project' | translate}}</a>
+                </span>
+            </div>
             <div id="responsive-menu-button" class="d-none" (click)="openResponsiveMenu()">
                 <img src="../../assets/img/responsive_menu.png" alt="">
             </div>

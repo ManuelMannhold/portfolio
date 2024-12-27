@@ -11,21 +11,18 @@
     flex-direction: column;
     overflow: hidden;
     align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
 
     header {
         width: 100%;
         padding-top: 100px;
-        padding-left: 100px;
 
         h2 {
             color: white;
             font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 700;
         }
-    }
-
-    section {
-        padding-left: 100px;
     }
 }
 
@@ -35,7 +32,6 @@ section {
     color: white;
     font-size: 16px;
     position: relative;
-    padding-left: 100px;
     display: flex;
     max-width: 1440px;
 }
@@ -131,7 +127,6 @@ section {
         height: auto;
         width: 100%;
         justify-content: flex-start;
-        padding-right: 100px;
     }
 
     .right {
@@ -152,8 +147,8 @@ section {
     }
 
     .about-me-container {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
 
 
         header {

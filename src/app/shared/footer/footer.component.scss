@@ -14,10 +14,12 @@ footer {
     height: 100%;
     width: 1440px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     color: white;
     overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .footer-name {

@@ -42,12 +42,13 @@ h3 {
     padding-top: 140px;
     background-color: rgb(20, 29, 47);
     overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 section {
     width: 100%;
     height: auto;
-    padding-left: 100px;
     max-width: 1440px;
 }
 
@@ -81,7 +82,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 90px;
 
     .projects-description {
         color: white;
