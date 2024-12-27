@@ -14,6 +14,10 @@ export class ImprintComponent {
   constructor(private router: Router) {}
    private translateService = inject(TranslateService);
 
+   ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
+
   closeImpressum() {
     this.router.navigate(['']); 
   }

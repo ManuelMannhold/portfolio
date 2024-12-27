@@ -10,4 +10,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class PrivacyPolicyComponent {
  private translateService = inject(TranslateService);
+
+ ngOnInit(): void {
+  window.scrollTo(0, 0);
+}
 }
