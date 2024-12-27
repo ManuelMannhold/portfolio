@@ -8,8 +8,7 @@
     color: white;
     text-shadow: 1px 1px 5px black;
     height: calc(100vh - 291px);
-    margin-top: 109px;
-    margin-bottom: 20px;
+    padding-top: 109px;
     max-width: 1440px;
 }
 
@@ -30,13 +29,13 @@
     align-items: center;
 
     h2 {
-        font-size: clamp(1rem, 6vw, 1rem);
+        font-size: clamp(0.5rem, 3vw, 4rem);
         text-align: center;
     }
 
     p {
         text-align: center;
-        font-size: clamp(1rem, 5vw, 1rem);
+        font-size: clamp(0.5rem, 3vw, 4rem);
         padding: 5px;
     }
 }
@@ -48,26 +47,17 @@
     align-items: center;
 
     p {
-        font-size: clamp(1rem, 5vw, 1rem);
+        font-size: clamp(0.5rem, 3vw, 4rem);
+    }
+}
+
+@media(max-height: 630px) {
+    #imprint-container {
+        height: calc(100vh - 150px)
     }
 }
 
 @media(max-height: 720px) {
-
-    .adress {
-
-        h1,
-        p {
-            font-size: unset;
-        }
-    }
-
-    .my-contact {
-        p {
-            font-size: unset
-        }
-    }
-
     #imprint-container {
         gap: 20px;
     }
