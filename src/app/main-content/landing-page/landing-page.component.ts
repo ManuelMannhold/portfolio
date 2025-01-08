@@ -9,19 +9,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './landing-page.component.scss'
 })
 
-
-
-// changeLanguage(language: string) {
-//   if (""]) {
-//     Object.keys(translate[language]).forEach(key => {
-//       const element = document.getElementById(key);
-//       if (element) {
-//         element.textContent = translate[language][key];
-//       }
-//     });
-//   }
-// }
-
 export class LandingPageComponent {
   private translateService = inject(TranslateService);
 }

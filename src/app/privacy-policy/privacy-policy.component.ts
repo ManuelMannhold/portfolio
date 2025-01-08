@@ -9,9 +9,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
- private translateService = inject(TranslateService);
+  private translateService = inject(TranslateService);
 
- ngOnInit(): void {
-  window.scrollTo(0, 0);
-}
+  /**
+  * Lifecycle hook that is called after Angular has initialized the component.
+  * Scrolls the window to the top of the page (coordinates 0, 0).
+  */
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 }

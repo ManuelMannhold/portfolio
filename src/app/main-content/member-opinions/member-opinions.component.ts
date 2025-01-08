@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -23,6 +23,12 @@ export class MemberOpinionsComponent {
     this.loadTranslations();
   }
 
+  /**
+ * Loads translations for the testimonials section.
+ * Subscribes to the translation service to retrieve the translated content for 'testimonials' 
+ * and updates the `testimonials` property with the retrieved data.
+ * 
+ */
   private loadTranslations() {
     this.translate.get('testimonials').subscribe((translatedTestimonials: any) => {
       this.testimonials = translatedTestimonials;
@@ -30,31 +36,19 @@ export class MemberOpinionsComponent {
   }
 
   /**
- * Advances to the next item in the testimonials array.
- * 
- * The function updates the `currentIndex` property to point to the next item in the `testimonials` array. 
- * It ensures the index wraps around to the start when it reaches the end of the array by using the modulo operator.
- * 
- * @remarks
- * This method assumes that the `testimonials` array is not empty. If the array is empty, 
- * the behavior may need additional handling to avoid potential issues.
+ * Advances to the next testimonial in the list.
+ * Increments the `currentIndex` by 1 and ensures it wraps around to the beginning 
+ * when reaching the end of the `testimonials` array.
  */
-
   goToNext(): void {
     this.currentIndex = (this.currentIndex + 1) % this.testimonials.length;
   }
 
   /**
- * Moves to the previous item in the testimonials array.
- * 
- * The function updates the `currentIndex` property to point to the previous item in the `testimonials` array. 
- * It ensures the index wraps around to the last item when it reaches the start of the array by using the modulo operator.
- * 
- * @remarks
- * This method assumes that the `testimonials` array is not empty. If the array is empty, 
- * additional handling may be required to prevent unintended behavior.
- */
-
+  * Moves to the previous testimonial in the list.
+  * Decrements the `currentIndex` by 1 and ensures it wraps around to the end 
+  * of the `testimonials` array if the beginning is surpassed.
+  */
   goToPrevious(): void {
     this.currentIndex = (this.currentIndex - 1 + this.testimonials.length) % this.testimonials.length;
   }

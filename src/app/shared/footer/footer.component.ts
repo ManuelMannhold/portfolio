@@ -17,9 +17,5 @@ export class FooterComponent {
   router: any;
 
   constructor() { }
-  navigate() {
-    this.router.navigate(['/zielroute']);
-  }
-
   private translateService = inject(TranslateService);
 }

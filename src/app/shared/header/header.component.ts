@@ -26,11 +26,27 @@ export class HeaderComponent {
     }
   }
 
+  /**
+ * Lifecycle hook that is called after Angular has initialized the component.
+ * Scrolls the window to the top of the page (coordinates 0, 0).
+ */
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
+
+  /**
+ * Changes the current application language.
+ * Toggles the language setting and updates the translation service to use the newly selected language.
+ */
   changeLanguage() {
     this.toggleLanguage();
     this.translateService.use(this.currentLanguage);
   }
 
+  /**
+ * Toggles the current language setting between English and German.
+ * Updates the `currentLanguage` property and stores the selected language in local storage.
+ */
   toggleLanguage() {
     if (this.english) {
       this.english = false;
@@ -43,18 +59,9 @@ export class HeaderComponent {
   }
 
   /**
- * Opens the responsive menu by changing its transform style.
- * 
- * The function performs the following:
- * - Retrieves the element with the ID "responsive-menu".
- * - If the element is found, it sets the `transform` CSS property to `translate(0)`, 
- *   making the menu visible by moving it into view.
- * 
- * @remarks
- * This method assumes that the "responsive-menu" element is initially hidden or positioned off-screen 
- * using CSS transforms, and this function makes it visible by adjusting its transform property.
+ * Opens the responsive menu by modifying its transform style.
+ * Finds the element with the ID 'responsive-menu' and sets its transform property to move it into view.
  */
-
   openResponsiveMenu() {
     let openMenu: HTMLElement | null = document.getElementById('responsive-menu');
     if (openMenu)
@@ -62,18 +69,9 @@ export class HeaderComponent {
   }
 
   /**
- * Closes the responsive menu by changing its transform style to move it off-screen.
- * 
- * The function performs the following:
- * - Retrieves the element with the ID "responsive-menu".
- * - If the element is found, it sets the `transform` CSS property to `translate(10000px)`, 
- *   effectively moving the menu out of view.
- * 
- * @remarks
- * This method assumes that the "responsive-menu" element is positioned using CSS transforms 
- * and this function hides it by moving it far off-screen.
+ * Closes the responsive menu by modifying its transform style.
+ * Finds the element with the ID 'responsive-menu' and sets its transform property to move it out of view.
  */
-
   closeResponsiveMenu() {
     let responsMenu = document.getElementById('responsive-menu');
     if (responsMenu)

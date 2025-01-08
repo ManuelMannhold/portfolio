@@ -41,16 +41,12 @@ export class ContactComponent {
   };
 
   /**
- * Handles the submission of a form and processes data accordingly.
+ * Handles the form submission for the contact form.
+ * Validates the form and submits the data to the server if all conditions are met.
+ * If the form is valid and the email test flag is not set, it sends a POST request with the form data.
+ * If the email test flag is set, it simply resets the form.
  * 
- * @param {NgForm} ngForm - The Angular form object containing form controls, values, and state.
- * 
- * The function performs the following:
- * - If the form is submitted, valid, and `mailTest` is false:
- *   - Sends a POST request to the specified endpoint with the data from `contactData`.
- *   - Resets the form upon successful response or logs an error if the request fails.
- * - If the form is submitted, valid, and `mailTest` is true:
- *   - Resets the form without sending the POST request.
+ * @param ngForm - The NgForm object representing the form.
  */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
@@ -74,26 +70,31 @@ export class ContactComponent {
   sendMail: boolean = false;
 
   /**
- * Adds a click event listener to the "contact-me-focus" element.
- * 
- * When the "contact-me-focus" element is clicked, the focus is set to the 
- * "input-name" element if it exists in the DOM.
+ * Adds a click event listener to the 'contact-me-focus' element.
+ * When clicked, it focuses on the 'input-name' field to improve the user experience 
+ * for submitting contact information.
  */
-
   contactMe() {
     document.getElementById('contact-me-focus')?.addEventListener('click', () => {
       document.getElementById('input-name')?.focus();
     })
   }
 
-  /** Initializes the component and adds event listeners to inputs. */
+  /**
+ * Angular lifecycle hook that is called after the component has been initialized.
+ * Calls the `addInputEventListeners` method to set up necessary event listeners 
+ * for input elements when the component is ready.
+ */
   ngOnInit() {
     this.addInputEventListeners();
   }
 
   /**
- * Toggles the visibility of the checkbox and updates the send button's state
- * based on input validation.
+ * Toggles the visibility of a checkbox and updates the state of the contact form.
+ * 
+ * The method checks if all required input elements (name, email, message) are filled out
+ * and updates the "send" button's state by adding or removing a class based on the input validity.
+ * Additionally, it shows or hides an error message depending on the form state.
  */
   toggleImage() {
     this.showCheckbox = !this.showCheckbox;
@@ -111,8 +112,12 @@ export class ContactComponent {
   }
 
   /**
- * Adds event listeners to input fields for real-time validation and updates 
- * the send button's state accordingly.
+ * Adds event listeners to the input fields of the contact form.
+ * Listens for input changes on the name, email, and message fields and 
+ * updates the state of the send button and error message accordingly.
+ * 
+ * If any of the input fields are invalid, an error message is displayed, 
+ * and the send button's state is updated to reflect the form's validity.
  */
   addInputEventListeners() {
     const inputName = document.getElementById('input-name') as HTMLInputElement;
@@ -120,9 +125,7 @@ export class ContactComponent {
     const inputMessage = document.getElementById('input-message') as HTMLTextAreaElement;
     const sendButton = document.getElementById('contact-message-send-button') as HTMLElement;
     const errorMessage = document.getElementById('input-span') as HTMLDivElement;
-
     this.showCheckbox = !this.showCheckbox;
-
     if (inputName && inputMail && inputMessage && sendButton) {
       const handleInputChange = () => {
         const error = this.ifElseSendButtonAddOrRemoveClass(inputName, inputMail, inputMessage, errorMessage);
@@ -133,7 +136,6 @@ export class ContactComponent {
         }
         this.checkInput(sendButton, error);
       };
-
       inputName.addEventListener('input', handleInputChange);
       inputMail.addEventListener('input', handleInputChange);
       inputMessage.addEventListener('input', handleInputChange);
@@ -141,14 +143,17 @@ export class ContactComponent {
   }
 
   /**
- * Validates the input fields and checks if there are any errors.
- * Returns `true` if there are validation errors, otherwise `false`.
- *
- * @param {HTMLInputElement} inputName - The name input field.
- * @param {HTMLInputElement} inputMail - The email input field.
- * @param {HTMLTextAreaElement} inputMessage - The message textarea field.
- * @param {HTMLDivElement} errorMessage - The element displaying error messages.
- * @returns {boolean} - Returns `true` if there are validation errors, `false` otherwise.
+ * Checks the validity of the form inputs and returns a boolean indicating whether the form is invalid.
+ * 
+ * The method validates the name, email, and message input fields. It checks if the name or message fields are empty,
+ * if the email is valid, and if there is any error message already present.
+ * 
+ * @param inputName - The input element for the name field.
+ * @param inputMail - The input element for the email field.
+ * @param inputMessage - The text area element for the message field.
+ * @param errorMessage - The div element that displays error messages.
+ * 
+ * @returns {boolean} - Returns `true` if any input is invalid or if there's an existing error message, otherwise `false`.
  */
   ifElseSendButtonAddOrRemoveClass(
     inputName: HTMLInputElement,
@@ -165,10 +170,14 @@ export class ContactComponent {
   }
 
   /**
- * Validates an email address using a regular expression.
- *
- * @param {string} email - The email address to validate.
- * @returns {boolean} - Returns `true` if the email is valid, `false` otherwise.
+ * Validates if the provided email string matches a standard email format.
+ * 
+ * This method uses a regular expression to check if the input email string is in the correct format 
+ * (e.g., example@domain.com).
+ * 
+ * @param email - The email string to validate.
+ * 
+ * @returns {boolean} - Returns `true` if the email matches the valid format, otherwise `false`.
  */
   isValidEmail(email: string): boolean {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -176,10 +185,14 @@ export class ContactComponent {
   }
 
   /**
- * Enables or disables the send button based on input validation and checkbox state.
- *
- * @param {HTMLElement} sendButton - The send button element to enable/disable.
- * @param {boolean} error - Indicates whether there is a validation error.
+ * Updates the state of the send button based on the form validity and checkbox status.
+ * 
+ * This method checks whether the checkbox is unchecked and if there are any form errors. 
+ * If both conditions are satisfied, it enables the send button by removing the 'button-disabled' class 
+ * and sets the `sendMail` flag to `true`. Otherwise, it disables the button and sets `sendMail` to `false`.
+ * 
+ * @param sendButton - The HTML element representing the send button.
+ * @param error - A boolean indicating whether there is an error in the form inputs.
  */
   checkInput(sendButton: HTMLElement, error: boolean) {
     if (!this.showCheckbox && !error) {
@@ -192,9 +205,12 @@ export class ContactComponent {
   }
 
   /**
-  * Displays a temporary email alert message and disables the send button 
-  * after a successful message submission.
-  */
+ * Displays an overlay message after successfully sending the form.
+ * 
+ * This method shows a temporary email alert by manipulating the DOM. 
+ * If the `sendMail` flag is `true`, it displays the email alert, prevents scrolling, and hides the alert after 2 seconds.
+ * It also disables the send button and toggles the checkbox visibility.
+ */
   showOverlayMessageSend() {
     const emailAlert = document.getElementById('email-alert');
 
