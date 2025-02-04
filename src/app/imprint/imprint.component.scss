@@ -43,6 +43,7 @@
 .my-contact {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 
     p {
@@ -67,5 +68,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+    }
+
+    .my-contact {
+        align-items: unset;
     }
 }
