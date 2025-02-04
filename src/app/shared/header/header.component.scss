@@ -42,9 +42,12 @@ nav {
     padding-left: 10px;
     padding-right: 10px;
     gap: 10px;
+
     div {
         display: flex;
         gap: 20px;
+        width: 35%;
+        justify-content: flex-end;
     }
 }
 
@@ -52,6 +55,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
+    justify-content: flex-end;
 
         img {
             max-width: 100%;
@@ -86,21 +90,13 @@ nav {
         cursor: pointer;
         color: red;
     }
-
 }
 
-.german {
-    background-image: url('../../../assets/img/german-flag.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-.english {
-    background-image: url('../../../assets/img/england-flag.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.change-language {
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    gap: 10px;
 }
 
 .toggle-language {
