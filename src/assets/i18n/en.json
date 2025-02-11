@@ -24,7 +24,8 @@
     "portfolio": {
         "examples": "Here are a few examples of my projects that I have programmed independently or in group work.",
         "join": "A task manager inspired by the Kanban system. Create and organize individual tasks using the drag and drop function.",
-        "pollo": "A game written with Javascript in Object Oriented Programming"
+        "pollo": "A game written with Javascript in Object Oriented Programming",
+        "portfolio": "My portfolio showcasing projects I have developed alone or in a team."
     },
     "testimonials": [
         {
