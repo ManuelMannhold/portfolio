@@ -26,6 +26,8 @@
         "join": "Ein Task manager inspiriert vom Kanban System. Erstellen und organisieren einzelner Tasks per drag and drop funktion.",
         "join-subtext": "Mein Part: AddTask / AddTask Board / Datenschutz / Rechtlicher Hinweis",
         "pollo": "Ein Spiel das mit Javascript in Objekt Orientierter Programmierung geschrieben wurde."
+        "pollo": "Ein Spiel das mit Javascript in Objekt Orientierter Programmierung geschrieben wurde.",
+        "portfolio": "Mein Portfolio mit Projekten, die ich alleine oder in Teamarbeit programmiert habe."
     },
     "testimonials": [
         {

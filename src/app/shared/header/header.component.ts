@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
@@ -7,7 +6,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, NgClass, RouterLink],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
@@ -35,32 +34,20 @@ export class HeaderComponent {
   }
 
   /**
- * Changes the current application language.
- * Toggles the language setting and updates the translation service to use the newly selected language.
+ * Sets the application language to the specified language code.
+ * Updates the translation service and stores the language preference in localStorage.
+ *
+ * @param {string} languageCode - The language code to set (e.g., 'de' for German, 'en' for English).
  */
-  changeLanguage() {
-    this.toggleLanguage();
+  changeLanguage(languageCode: string) {
+    this.currentLanguage = languageCode;
     this.translateService.use(this.currentLanguage);
-  }
-
-  /**
- * Toggles the current language setting between English and German.
- * Updates the `currentLanguage` property and stores the selected language in local storage.
- */
-  toggleLanguage() {
-    if (this.english) {
-      this.english = false;
-      this.currentLanguage = 'de';
-    } else {
-      this.english = true;
-      this.currentLanguage = 'en';
-    }
     localStorage.setItem('language', this.currentLanguage);
   }
 
   /**
- * Opens the responsive menu by modifying its transform style.
- * Finds the element with the ID 'responsive-menu' and sets its transform property to move it into view.
+ * Sets the application language to English.
+ * Updates the translation service to use English ('en') and stores the preference in localStorage.
  */
   openResponsiveMenu() {
     let openMenu: HTMLElement | null = document.getElementById('responsive-menu');

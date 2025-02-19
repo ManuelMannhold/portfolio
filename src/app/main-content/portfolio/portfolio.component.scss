@@ -92,11 +92,12 @@ header {
     }
 }
 
-.join-project {
+.join-project,
+.portfolio-project
+{
     width: 100%;
     display: flex;
     align-items: center;
-    padding-top: 100px;
 
     .join-project-image {
         img {
@@ -137,9 +138,13 @@ header {
 }
 
 @media(max-width: 900px) {
-    .join-project {
+    .join-project,
+    .portfolio-project
+    {
         flex-direction: column;
-        .join-project-info {
+        .join-project-info,
+        .portfolio-project-info
+        {
             text-align: center;
             align-items: center;
         }
@@ -160,9 +165,13 @@ header {
         padding-left: 20px;
     }
 
-    .join-project {
+    .join-project,
+    .portfolio-project
+    {
 
-        .join-project-info{
+        .join-project-info, 
+        .portfolio-project-info
+        {
         width: unset;
     }
     }
