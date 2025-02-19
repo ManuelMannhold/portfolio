@@ -163,10 +163,7 @@
         flex-direction: column;
         align-items: center;
     }
-
-    .links-to-locations {
-        padding-bottom: 20px;
-    }    
+   
     .profil img{
             width: unset!important;
     }
@@ -407,8 +404,6 @@
 
 @media(max-height: 560px) and (max-width: 780px) {
     .profil-info {
-        flex-direction: column;
-        justify-content: space-evenly;
         align-items: center;
     }
 }
