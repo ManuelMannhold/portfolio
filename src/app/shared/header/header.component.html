@@ -2,6 +2,7 @@
     <nav>
         <div class="header-container">
             <span class="header-name-language">
+                <span>Go back<img src="../../../assets/img/arrow-small.png" style="width: 50px;"></span>
                 <a routerLink="main-content"><img src="../../../assets/img/manuel_logo_white_and_orange.png" alt=""></a>
             </span>
             <span class="change-language"><span (click)="changeLanguage('de')" class="change-language">DE</span> | <span (click)="changeLanguage('en')" class="change-language">EN</span></span>
@@ -22,6 +23,7 @@
                 <a href="#portfolio-anchor">{{'responsmenu.portfolio' | translate}}</a>
                 <a href="#contact-anchor">{{'responsmenu.contact' | translate}}</a>
                 <a href="imprint">{{'responsmenu.imprint' | translate}}</a>
+                <a href="privacy-policy">{{ 'policy.policy' | translate}}</a>
             </div>
         </div>
     </nav>

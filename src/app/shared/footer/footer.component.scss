@@ -24,10 +24,17 @@ footer {
 
 .footer-name {
     font-size: 16px;
+    padding-bottom: 20px;
 
     h2 {
         font-size: clamp(2rem, 5vw, 5rem);
         font-weight: 700;
+    }
+
+    span {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
     }
 }
 
