@@ -150,6 +150,11 @@
     border: 1px solid green;
 }
 
+@media(pointer:coarse) {
+    .this-is-me {
+        height: calc(100svh - 109px);
+    }
+}
 
 @media(max-width: 1230px) and (max-height: 720px) {
     .vector {
