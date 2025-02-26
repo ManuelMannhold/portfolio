@@ -96,6 +96,7 @@ nav {
     font-size: 24px;
     display: flex;
     gap: 10px;
+    width: 60px;
 }
 
 .toggle-language {
@@ -163,7 +164,26 @@ nav {
     }
 
     nav {
-        padding-right: 20px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+
+@media(max-width: 520px) {
+    .change-language {
+        flex-direction: column;
+        gap: unset;
+        padding-left: 5px;
+        line-height: 20px;
+        align-items: center;
+        font-size: 20px;
+
+        .seperator {
+            transform: rotate(90deg);
+            display: flex;
+            justify-content: center;
+        }
     }
 }
 

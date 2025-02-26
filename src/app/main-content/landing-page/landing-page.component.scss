@@ -58,7 +58,7 @@
 
     span p {
         transform: rotate(-90deg);
-        font-size: clamp(0.7rem, 3vw, 3rem);
+        font-size: clamp(1.5rem, 5vw, 3rem);
     }
 
     div {
@@ -70,12 +70,12 @@
     .red-color {
         display: block;
         text-transform: uppercase;
-        font-size: clamp(1rem, 3vw, 3rem);
+        font-size: clamp(1.5rem, 6vw, 3rem);
         color: rgb(255, 71, 71)
     }
 
     h1 {
-        font-size: clamp(1rem, 4vw, 4rem);
+        font-size: clamp(1.5rem, 6vw, 3rem);
         font-weight: 700;
     }
 }
@@ -171,6 +171,7 @@
     .profil {
         width: 100%;
         flex: 1;
+        height: 60%;
     }
 
     .profil-info {
@@ -178,7 +179,6 @@
         width: 100%;
         flex: 1;
         padding-bottom: 5px;
-        flex-direction: row;
 
         div {
             width: unset;
@@ -221,13 +221,15 @@
     }
 }
 
+@media(max-width: 700px) {
+    .email-adress {
+        display: none;
+    }
+}
+
 @media (max-width: 605px) {
     .profil-info {
         padding-right: unset;
-    }
-
-    .email-adress {
-        display: none;
     }
 
     .header {
