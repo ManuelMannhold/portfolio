@@ -89,6 +89,9 @@ export class ContactComponent {
     this.addInputEventListeners();
   }
 
+  /**
+ * Scrolls the window to the top of the page.
+ */
   topView() {
     window.scrollTo(0,0);
   }

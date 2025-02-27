@@ -34,6 +34,9 @@ export class HeaderComponent {
     this.setActiveColorForLanguage();
   }
 
+  /**
+ * Scrolls the window to the top of the page.
+ */
   toTop() {
     window.scrollTo(0, 0);
   }
@@ -51,6 +54,10 @@ export class HeaderComponent {
     this.setActiveColorForLanguage();
   }
 
+  /**
+ * Sets the active CSS class for the currently selected language.
+ * Adds the 'active' class to the selected language button and removes it from the other.
+ */
   setActiveColorForLanguage() {
     if (this.currentLanguage === 'de') {
       document.getElementById('german')?.classList.add('active');

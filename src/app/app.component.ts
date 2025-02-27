@@ -16,7 +16,7 @@ import { MainContentComponent } from "./main-content/main-content.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, CommonModule, RouterOutlet, TranslateModule, HeaderComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ContactComponent, FooterComponent, LandingPageComponent, MemberOpinionsComponent, MainContentComponent],
+  imports: [RouterOutlet, CommonModule, RouterOutlet, TranslateModule, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -26,12 +26,23 @@ export class AppComponent implements OnInit{
   languages = ["en", "de"];
   private translateService = inject(TranslateService);
 
+  /**
+ * Initializes the component by setting the default language for translations.
+ * Retrieves the saved language from local storage or defaults to English ('en').
+ * Sets and applies the language using the TranslateService.
+ */
   ngOnInit(): void {
     const defaultLanguage = localStorage.getItem('language') || 'en';
     this.translateService.setDefaultLang(defaultLanguage);
     this.translateService.use(defaultLanguage);
   }
 
+  /**
+ * Toggles the application language between English ('en') and German ('de').
+ * Updates the current language and applies the change using the TranslateService.
+ * 
+ * @param {string} language - The selected language (not used in the function logic).
+ */
   changeLanguage(language:string) {
     this.currentLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translateService.use(this.currentLanguage);
