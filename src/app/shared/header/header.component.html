@@ -2,7 +2,7 @@
 
             <span class="header-name-language">
                 <span>{{'topic.back' | translate}} <img src="../../../assets/img/arrow-small.png" style="width: 50px;"></span>
-                <a routerLink="main-content"><img src="../../../assets/img/manuel_logo_white_and_orange.png" alt=""></a>
+                <a routerLink="main-content" (click)="toTop()"><img src="../../../assets/img/manuel_logo_white_and_orange.png" alt=""></a>
             </span>
             <span class="change-language"><span (click)="changeLanguage('de')" class="change-language" id="german">DE</span> <span class="seperator">|</span> <span (click)="changeLanguage('en')" class="change-language" id="english">EN</span></span>
             <div>

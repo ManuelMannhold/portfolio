@@ -89,6 +89,10 @@ export class ContactComponent {
     this.addInputEventListeners();
   }
 
+  topView() {
+    window.scrollTo(0,0);
+  }
+
   /**
  * Toggles the visibility of a checkbox and updates the state of the contact form.
  * 

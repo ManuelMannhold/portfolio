@@ -34,6 +34,10 @@ export class HeaderComponent {
     this.setActiveColorForLanguage();
   }
 
+  toTop() {
+    window.scrollTo(0, 0);
+  }
+
   /**
  * Sets the application language to the specified language code.
  * Updates the translation service and stores the language preference in localStorage.
