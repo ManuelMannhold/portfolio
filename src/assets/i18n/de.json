@@ -58,10 +58,10 @@
         "addname": "Namen eingeben.....",
         "placeholdermessage": "Nachricht eingeben.....",
         "placeholdermail": "Email eingeben....."
-    }, 
+    },
     "imprint": {
         "imprint": "Impressum"
-    }, 
+    },
     "responsmenu": {
         "aboutme": "Über mich",
         "skill": "Fähigkeiten",
@@ -106,8 +106,11 @@
         "remarksheader": "Schlussbemerkungen",
         "remarks": "Ich hoffen, dass diese Datenschutzrichtlinie alle Ihre Fragen beantwortet.",
         "rigtsreserved": "© 2024 Manuel Mannhold. Alle Rechte vorbehalten."
-    }, 
+    },
     "footer": {
         "imprint": "Impressum"
+    },
+    "topic": {
+        "back": "Zurück"
     }
 }

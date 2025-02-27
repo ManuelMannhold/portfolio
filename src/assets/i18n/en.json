@@ -110,5 +110,8 @@
     }, 
     "footer": {
         "imprint": "Imprint"
+    },
+    "topic": {
+        "back": "Go back"
     }
 }

@@ -10,10 +10,10 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent {
   currentLanguage: string = 'en';
   private translateService = inject(TranslateService);
-
   english: boolean = true;
 
   constructor() {
@@ -31,6 +31,7 @@ export class HeaderComponent {
  */
   ngOnInit(): void {
     window.scrollTo(0, 0);
+    this.setActiveColorForLanguage();
   }
 
   /**
@@ -43,6 +44,17 @@ export class HeaderComponent {
     this.currentLanguage = languageCode;
     this.translateService.use(this.currentLanguage);
     localStorage.setItem('language', this.currentLanguage);
+    this.setActiveColorForLanguage();
+  }
+
+  setActiveColorForLanguage() {
+    if (this.currentLanguage === 'de') {
+      document.getElementById('german')?.classList.add('active');
+      document.getElementById('english')?.classList.remove('active');
+    } else {
+      document.getElementById('english')?.classList.add('active');
+      document.getElementById('german')?.classList.remove('active');
+    }
   }
 
   /**
