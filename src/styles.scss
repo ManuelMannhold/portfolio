@@ -23,6 +23,28 @@
     scroll-padding-top: 100px;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #141d2f #435475;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #435475;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #141d2f;
+    border-radius: 10px;
+    border: 3px dashed #ffffff;
+  }
+
 body {
     background-color: rgb(20, 29, 47);
 }
