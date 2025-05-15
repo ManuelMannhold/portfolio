@@ -27,8 +27,7 @@
         "join-subtext": "My part: AddTask / AddTask Board / Privacy Policy / Legal notice",
         "pollo": "A game written with Javascript in Object Oriented Programming",
         "portfolio": "A collection of projects I have developed, either individually or as part of a team.",
-        "weather-app": "A small weather app to demonstrate the use of APIs.",
-        "weather-app-header": "Mini weather app"
+        "pokedex": "A self-programmed Pokédex based on the PokéAPI."
     },
     "testimonials": [
         {
