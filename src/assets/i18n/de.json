@@ -12,9 +12,9 @@
     },
     "aboutme": {
         "aboutme": "Über mich",
-        "story": "Die IT hat mich schon immer fasziniert, insbesondere die Programmierung. Derzeit arbeite ich als Maschinen-/ und Anlagenführer, freue mich jedoch darauf, meine berufliche Zukunft in der IT-Branche zu gestalten. Bei der Developer Akademie habe ich das Programmieren in JavaScript gelernt und später meine Kenntnisse in TypeScript und Angular erweitert. Durch praxisnahe Projekte, die sowohl individuell als auch im Team durchgeführt wurden, konnte ich erste wertvolle Einblicke in die Welt der Programmierung gewinnen.",
+        "story": "Mein Interesse an Informationstechnologie und insbesondere an der Softwareentwicklung hat mich dazu motiviert, bei der Developer Akademie fundierte Kenntnisse in JavaScript, TypeScript und Angular zu erwerben. In praxisnahen Projekten konnte ich sowohl eigenständig als auch im Team wertvolle Erfahrungen in der Anwendungsentwicklung sammeln. Diese Fähigkeiten möchte ich nun in einem professionellen Umfeld weiter vertiefen und einsetzen.",
         "newtask": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen ständig zu erweitern.",
-        "job": "In meinem Beruf ist Programmieren nicht nur das Schreiben von Code; es ist eine kreative Form des Problemlösens. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+        "job": "Für mich bedeutet Programmieren weit mehr als das reine Schreiben von Code: Es ist ein strukturiertes und kreatives Lösen technischer Herausforderungen. Mein Ziel ist es, komplexe Anforderungen in benutzerfreundliche und effiziente Anwendungen umzusetzen und so einen nachhaltigen Beitrag zum Projekterfolg zu leisten."
     },
     "myskills": {
         "skill": "Meine Fähigkeiten",

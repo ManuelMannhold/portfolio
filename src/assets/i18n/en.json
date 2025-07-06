@@ -12,9 +12,9 @@
     },
     "aboutme": {
         "aboutme": "About me",
-        "story": "I have always been fascinated by IT, especially programming. I am currently working as a machine and plant operator, but I am looking forward to shaping my professional future in the IT industry. At the Developer Academy I learned programming in JavaScript and later expanded my knowledge of TypeScript and Angular. Through practical projects that were carried out both individually and in a team, I was able to gain my first valuable insights into the world of programming.",
+        "story": "My interest in information technology, and software development in particular, motivated me to acquire solid knowledge of JavaScript, TypeScript, and Angular at the Developer Academy. Through hands-on projects, I gained valuable experience in application development, both independently and as part of a team. I am now eager to further develop and apply these skills in a professional environment.",
         "newtask": "I am open-minded and always looking for personal challenges in order to constantly expand my knowledge.",
-        "job": "In my job, programming isn't just about writing code; it is a creative form of problem solving. I pride myself on transforming complex technical challenges into simple, user-friendly solutions. This is how I help you achieve your goals and bring your visions to life."
+        "job": "For me, programming means far more than just writing code: it is a structured and creative way of solving technical challenges. My goal is to transform complex requirements into user-friendly and efficient applications, thereby making a sustainable contribution to the success of projects."
     },
     "myskills": {
         "skill": "My skills",
