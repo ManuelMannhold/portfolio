@@ -2,15 +2,13 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [TranslateModule, RouterLink],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-
 export class HeaderComponent {
   currentLanguage: string = 'en';
   private translateService = inject(TranslateService);
@@ -26,27 +24,27 @@ export class HeaderComponent {
   }
 
   /**
- * Lifecycle hook that is called after Angular has initialized the component.
- * Scrolls the window to the top of the page (coordinates 0, 0).
- */
+   * Lifecycle hook that is called after Angular has initialized the component.
+   * Scrolls the window to the top of the page (coordinates 0, 0).
+   */
   ngOnInit(): void {
     window.scrollTo(0, 0);
     this.setActiveColorForLanguage();
   }
 
   /**
- * Scrolls the window to the top of the page.
- */
+   * Scrolls the window to the top of the page.
+   */
   toTop() {
     window.scrollTo(0, 0);
   }
 
   /**
- * Sets the application language to the specified language code.
- * Updates the translation service and stores the language preference in localStorage.
- *
- * @param {string} languageCode - The language code to set (e.g., 'de' for German, 'en' for English).
- */
+   * Sets the application language to the specified language code.
+   * Updates the translation service and stores the language preference in localStorage.
+   *
+   * @param {string} languageCode - The language code to set (e.g., 'de' for German, 'en' for English).
+   */
   changeLanguage(languageCode: string) {
     this.currentLanguage = languageCode;
     this.translateService.use(this.currentLanguage);
@@ -55,9 +53,9 @@ export class HeaderComponent {
   }
 
   /**
- * Sets the active CSS class for the currently selected language.
- * Adds the 'active' class to the selected language button and removes it from the other.
- */
+   * Sets the active CSS class for the currently selected language.
+   * Adds the 'active' class to the selected language button and removes it from the other.
+   */
   setActiveColorForLanguage() {
     if (this.currentLanguage === 'de') {
       document.getElementById('german')?.classList.add('active');
@@ -69,22 +67,21 @@ export class HeaderComponent {
   }
 
   /**
- * Sets the application language to English.
- * Updates the translation service to use English ('en') and stores the preference in localStorage.
- */
+   * Sets the application language to English.
+   * Updates the translation service to use English ('en') and stores the preference in localStorage.
+   */
   openResponsiveMenu() {
-    let openMenu: HTMLElement | null = document.getElementById('responsive-menu');
-    if (openMenu)
-      openMenu.style.transform = 'translate(0)';
+    let openMenu: HTMLElement | null =
+      document.getElementById('responsive-menu');
+    if (openMenu) openMenu.style.transform = 'translate(0)';
   }
 
   /**
- * Closes the responsive menu by modifying its transform style.
- * Finds the element with the ID 'responsive-menu' and sets its transform property to move it out of view.
- */
+   * Closes the responsive menu by modifying its transform style.
+   * Finds the element with the ID 'responsive-menu' and sets its transform property to move it out of view.
+   */
   closeResponsiveMenu() {
     let responsMenu = document.getElementById('responsive-menu');
-    if (responsMenu)
-      responsMenu.style.transform = 'translate(10000px)';
+    if (responsMenu) responsMenu.style.transform = 'translate(10000px)';
   }
 }
