@@ -99,7 +99,6 @@ nav {
   font-size: 24px;
   display: flex;
   gap: 10px;
-  width: 60px;
 }
 
 .toggle-language {
@@ -121,6 +120,11 @@ nav {
   align-items: center;
   gap: 20px;
   font-size: 24px;
+}
+
+.navigation-links {
+  flex: 1;
+  padding-left: 10px;
 }
 
 @media (max-width: 860px) {
