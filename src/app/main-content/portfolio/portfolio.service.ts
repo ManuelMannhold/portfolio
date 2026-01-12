@@ -43,6 +43,26 @@ export class PortfolioService {
       githubUrl: 'https://github.com/ManuelMannhold/pokedex-new-design.git',
       type: 'javascript',
     },
+    {
+      id: 'ng-chat',
+      title: 'NG-Chat',
+      tech: 'HTML | CSS | TypeScript | Angular',
+      descriptionKey: 'Chatbot mit Angular programmiert',
+      image: 'assets/img/ng-chat.PNG',
+      liveUrl: 'https://ng-chat.manuel-mannhold.de',
+      githubUrl: 'https://github.com/ManuelMannhold/ng-chat',
+      type: 'angular',
+    },
+    {
+      id: 'echo-note',
+      title: 'Echo Note',
+      tech: 'HTML | CSS | TypeScript | Angular',
+      descriptionKey: 'Notizen App mit Angular programmiert',
+      image: 'assets/img/echo-note.PNG',
+      liveUrl: 'https://echo-note.manuel-mannhold.de',
+      githubUrl: 'https://github.com/ManuelMannhold/echo-note',
+      type: 'angular',
+    },
   ];
 
   getProjects(): Project[] {
