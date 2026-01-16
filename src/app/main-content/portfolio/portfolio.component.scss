@@ -92,60 +92,66 @@ header {
     }
 }
 
-.join-project,
-.portfolio-project
-{
+.project-card {
     width: 100%;
     display: flex;
     align-items: center;
-
-    .join-project-image,
-    .portfolio-project-image
-    {
-        img {
-            width: 100%;
-        }
-    }
-
-    .join-project-info,
-    .portfolio-project-info
-    {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        align-items: flex-start;
-        gap: 15px;   
-        width: 100%; 
-    }
 }
 
-.el-pollo-locco-project,
-.pokedex-project
-{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    text-align: right;
+// .join-project,
+// .portfolio-project
+// {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
 
-    .el-pollo-loco-project-image,
-    .pokedex-project-image
-    {
-        img {
-            width: 100%;
-        }
-    }
-}
+//     .join-project-image,
+//     .portfolio-project-image
+//     {
+//         img {
+//             width: 100%;
+//         }
+//     }
 
-.el-pollo-loco-project-info,
-.pokedex-project-info
-{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-    width: 100%;
-}
+//     .join-project-info,
+//     .portfolio-project-info
+//     {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: left;
+//         align-items: flex-start;
+//         gap: 15px;   
+//         width: 100%; 
+//     }
+// }
+
+// .el-pollo-locco-project,
+// .pokedex-project
+// {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: row-reverse;
+//     text-align: right;
+
+//     .el-pollo-loco-project-image,
+//     .pokedex-project-image
+//     {
+//         img {
+//             width: 100%;
+//         }
+//     }
+// }
+
+// .el-pollo-loco-project-info,
+// .pokedex-project-info
+// {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     gap: 15px;
+//     width: 100%;
+// }
 
 @media(max-width: 900px) {
     .join-project,

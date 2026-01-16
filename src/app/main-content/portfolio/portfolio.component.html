@@ -5,92 +5,57 @@
       <h2>Portfolio</h2>
       <span class="stripe-right"></span>
     </header>
-    <div class="projects">
+    <div class="filter-header">
       <p class="projects-description">{{ "portfolio.examples" | translate }}</p>
-      <div class="projects-examples">
-        <div class="join-project">
-          <div class="join-project-image">
-            <img src="../../assets/img/join.png" alt="" />
-          </div>
-          <div class="join-project-info">
-            <h2>Join</h2>
-            <h3>HTML | CSS | JavaScript | Firebase</h3>
-            <p>{{ "portfolio.join" | translate }}</p>
-            <p>{{ "portfolio.join-subtext" | translate }}</p>
-            <span class="buttons-project">
-              <a
-                href="https://join.manuel-mannhold.de/index.html"
-                target="_blank"
-                ><button>Live Test</button></a
-              >
-              <a href="https://github.com/ManuelMannhold/join" target="_blank"
-                ><button class="buttons-project-transparent">Github</button></a
-              >
-            </span>
-          </div>
+      <div class="filter-buttons">
+        <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">
+          All Projects
+        </button>
+        <button class="filter-btn" [class.active]="activeFilter === 'javascript'" (click)="setFilter('javascript')">
+          JavaScript
+        </button>
+        <button class="filter-btn" [class.active]="activeFilter === 'angular'" (click)="setFilter('angular')">
+          Angular
+        </button>
+      </div>
+    </div>
+    <div class="projects">
+      @for (project of filteredProjects; track project.id) {
+      <div class="project-card" [attr.data-type]="project.type">
+        <div class="project-image">
+          @if (project.image) {
+          <img [src]="project.image" [alt]="project.title" />
+          }
         </div>
-        <div class="el-pollo-locco-project">
-          <div class="el-pollo-loco-project-image">
-            <img src="../../assets/img/pollo-locco.png" alt="" />
+        <div class="project-content">
+          <div class="project-header">
+            <h3 class="project-title">{{ project.title }}</h3>
           </div>
-          <div class="el-pollo-loco-project-info">
-            <h2>El Pollo Locco</h2>
-            <h3>HTML | CSS | JavaScript</h3>
-            <p>{{ "portfolio.pollo" | translate }}</p>
-            <span class="buttons-project">
-              <a
-                href="https://el-pollo-loco.manuel-mannhold.de/index.html"
-                target="_blank"
-                ><button>Live Test</button></a
-              >
-              <a
-                href="https://github.com/ManuelMannhold/el-pollo-loco"
-                target="_blank"
-                ><button class="buttons-project-transparent">Github</button></a
-              >
-            </span>
-          </div>
-        </div>
-        <div class="portfolio-project">
-          <div class="portfolio-project-image">
-            <img src="../../../assets/img/portfolio.PNG" alt="" />
-          </div>
-          <div class="portfolio-project-info">
-            <h2>Portfolio</h2>
-            <h3>HTML | CSS | TypeScript | Angular</h3>
-            <p>{{ "portfolio.portfolio" | translate }}</p>
-            <span class="buttons-project">
-              <a
-                href="https://github.com/ManuelMannhold/portfolio"
-                target="_blank"
-                ><button class="buttons-project-transparent">Github</button></a
-              >
-            </span>
-          </div>
-        </div>
-        <div class="pokedex-project">
-          <div class="pokedex-project-image">
-            <img src="../../assets/img/pokedex-portfolio.PNG" alt="" />
-          </div>
-          <div class="pokedex-project-info">
-            <h2>Pokedex</h2>
-            <h3>HTML | CSS | JavaScript | API</h3>
-            <p>{{ "portfolio.pokedex" | translate }}</p>
-            <span class="buttons-project">
-              <a
-                href="https://pokedex.manuel-mannhold.de/index.html"
-                target="_blank"
-                ><button>Live Test</button></a
-              >
-              <a
-                href="https://github.com/ManuelMannhold/pokedex-new-design.git"
-                target="_blank"
-                ><button class="buttons-project-transparent">Github</button></a
-              >
-            </span>
+
+          <p class="project-tech">{{ project.tech }}</p>
+
+          @if (project.descriptionKey) {
+          <p class="project-description">
+            {{ project.descriptionKey | translate }}
+          </p>
+          }
+
+          <div class="project-links">
+            @if (project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              Live Test
+            </a>
+            }
+            @if (project.githubUrl) {
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              GitHub
+            </a>
+            }
           </div>
         </div>
       </div>
+      }
     </div>
+
   </section>
 </div>
