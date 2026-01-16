@@ -27,7 +27,9 @@
     "join-subtext": "Mein Part: AddTask / AddTask Board / Datenschutz / Rechtlicher Hinweis",
     "pollo": "Ein Spiel das mit Javascript in Objekt Orientierter Programmierung geschrieben wurde.",
     "portfolio": "Mein Portfolio mit Projekten, die ich alleine oder in Teamarbeit programmiert habe.",
-    "pokedex": "Ein selbst programmierter Pokédex auf Basis der PokéAPI."
+    "pokedex": "Ein selbst programmierter Pokédex auf Basis der PokéAPI.",
+    "ng-chat": "Ein Chatprogramm mit Angular.",
+    "echo-note": "Notizen App mit Angular programmiert."
   },
   "testimonials": [
     {
