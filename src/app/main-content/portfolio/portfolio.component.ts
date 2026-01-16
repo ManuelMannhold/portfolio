@@ -11,7 +11,7 @@ type FilterType = 'all' | ProjectType;
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss', './media.scss']
 })
 export class PortfolioComponent implements OnInit {
   private translateService = inject(TranslateService);

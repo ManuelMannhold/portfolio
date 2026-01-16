@@ -7,7 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './member-opinions.component.html',
-  styleUrl: './member-opinions.component.scss'
+  styleUrls: ['./member-opinions.component.scss', './media.scss']
 })
 export class MemberOpinionsComponent {
 

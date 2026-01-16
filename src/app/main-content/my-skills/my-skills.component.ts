@@ -6,7 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './my-skills.component.html',
-  styleUrl: './my-skills.component.scss'
+  styleUrls: ['./my-skills.component.scss', './media.scss']
 })
 export class MySkillsComponent {
   private translateService = inject(TranslateService);

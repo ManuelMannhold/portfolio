@@ -9,7 +9,7 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [FormsModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss', './media.scss']
 })
 export class ContactComponent {
 
@@ -87,13 +87,6 @@ export class ContactComponent {
  */
   ngOnInit() {
     this.addInputEventListeners();
-  }
-
-  /**
- * Scrolls the window to the top of the page.
- */
-  topView() {
-    window.scrollTo(0,0);
   }
 
   /**
