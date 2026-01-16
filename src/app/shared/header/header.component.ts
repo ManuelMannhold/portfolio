@@ -1,11 +1,12 @@
-import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Component, HostListener, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, RouterLink],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -13,8 +14,9 @@ export class HeaderComponent {
   currentLanguage: string = 'en';
   private translateService = inject(TranslateService);
   english: boolean = true;
+  showGoBack = false;
 
-  constructor() {
+  constructor(private router: Router) {
     const savedLanguage = localStorage.getItem('language');
     if (savedLanguage) {
       this.currentLanguage = savedLanguage;
@@ -22,6 +24,17 @@ export class HeaderComponent {
       this.translateService.use(this.currentLanguage);
     }
   }
+
+  @HostListener('window:scroll', [])
+onScroll(): void {
+  this.showGoBack = window.scrollY > 200;
+}
+
+toTop(): void {
+  this.router.navigateByUrl('/').then(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
   /**
    * Lifecycle hook that is called after Angular has initialized the component.
@@ -32,12 +45,6 @@ export class HeaderComponent {
     this.setActiveColorForLanguage();
   }
 
-  /**
-   * Scrolls the window to the top of the page.
-   */
-  toTop() {
-    window.scrollTo(0, 0);
-  }
 
   /**
    * Sets the application language to the specified language code.

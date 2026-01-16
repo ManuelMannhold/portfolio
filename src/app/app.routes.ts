@@ -6,6 +6,5 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 export const routes: Routes = [
   { path: '', component: MainContentComponent },
   { path: 'imprint', component: ImprintComponent },
-  { path: 'main-content', component: MainContentComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent }
 ];

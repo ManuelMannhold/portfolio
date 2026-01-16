@@ -10,6 +10,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 
 export class LandingPageComponent {
+  emailstring = 'mailto:contact@manuel-mannhold.de';
+
   private translateService = inject(TranslateService);
 }
 
