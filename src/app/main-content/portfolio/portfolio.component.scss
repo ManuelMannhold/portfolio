@@ -1,13 +1,4 @@
 
-@mixin dFlexGapButtons{
-    display: flex;
-    gap: 86px;
-}
-
-.buttons-project {
-    @include dFlexGapButtons;
-}
-
 .buttons-project-transparent {
     background-color: transparent;
     border: 1px solid #FA7902;
@@ -19,7 +10,9 @@
 
 p {
     color: white;
-    font-size: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 420px;
 }
 
 h2 {
@@ -37,13 +30,13 @@ h3 {
 }
   
 .portfolio-container {
-    width: 1440px;
-    height: auto;
-    padding-top: 140px;
-    background-color: rgb(20, 29, 47);
-    overflow: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 140px;
+  background-color: rgb(20, 29, 47);
+  overflow: hidden;
+  padding-inline: 16px;
 }
 
 section {
@@ -92,140 +85,103 @@ header {
     }
 }
 
+.project-tech {
+    text-decoration: underline;
+}
+
 .project-card {
     width: 100%;
     display: flex;
     align-items: center;
+
+    .project-image{
+        width: 45%;
+
+        img {
+            width: 100%;
+            max-width: 600px;
+        }
+    }
 }
 
-// .join-project,
-// .portfolio-project
-// {
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
+.filter-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 
-//     .join-project-image,
-//     .portfolio-project-image
-//     {
-//         img {
-//             width: 100%;
-//         }
-//     }
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+}
 
-//     .join-project-info,
-//     .portfolio-project-info
-//     {
-//         display: flex;
-//         flex-direction: column;
-//         text-align: left;
-//         align-items: flex-start;
-//         gap: 15px;   
-//         width: 100%; 
-//     }
-// }
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid #FA7902;
+  color: #FA7902;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
 
-// .el-pollo-locco-project,
-// .pokedex-project
-// {
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     flex-direction: row-reverse;
-//     text-align: right;
+  &:hover {
+    background-color: #FA7902;
+    color: white;
+  }
+}
 
-//     .el-pollo-loco-project-image,
-//     .pokedex-project-image
-//     {
-//         img {
-//             width: 100%;
-//         }
-//     }
-// }
+.project-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
 
-// .el-pollo-loco-project-info,
-// .pokedex-project-info
-// {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
-//     gap: 15px;
-//     width: 100%;
-// }
 
 @media(max-width: 900px) {
-    .join-project,
-    .portfolio-project
-    {
-        flex-direction: column;
 
-        .join-project-info,
-        .portfolio-project-info
-        {
-            text-align: center;
-            align-items: center;
-        }
+    .project-card {
+        flex-direction: column;
     }
 
-    .el-pollo-locco-project,
-    .pokedex-project
-    {
-        flex-direction: column;
-        
-        .el-pollo-loco-project-info,
-        .pokedex-project-info
-        {
-            text-align: center;
-            align-items: center;
-        }
+    .project-card {
+    .project-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
+  }
+
+    .project-content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+    .buttons-project {
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .project-card .project-image img {
+    max-width: 280px;
+  }
 } 
 
 @media(max-width: 600px) {
-    section {
-        padding-left: 20px;
+    .filter-buttons {
+        flex-direction: column;
     }
-
-    .join-project,
-    .portfolio-project
-    {
-
-        .join-project-info, 
-        .portfolio-project-info
-        {
-        width: unset;
-    }
-    }
-
-    .el-pollo-locco-project,
-    .portfolio-project,
-    .pokedex-project
-    {
-        margin-top: 70px;
-    }
-
-        .el-pollo-loco-project-info,
-        .pokedex-project-info
-        {
-            width: unset;
-            align-items: unset;
-        }
-    
-        .portfolio-container {
-            padding-left: 20px;
-
-            #portfolio-anchor {
-                padding-left: unset;
-            }
-        }
-
-        .projects {
-            padding-right: 20px;
-            
-            .projects-description {
-                padding-left: unset;
-            }
-        }
 }
 
 @media(max-width: 450px) {
@@ -255,5 +211,11 @@ header {
         align-items: center;
         width: 100%;
     }
+
+    .buttons-project {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
 }
 

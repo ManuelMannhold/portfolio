@@ -65,45 +65,37 @@ app-privacy-policy
     max-width: 1920px;
 }
 
+
 button {
-    width: 165px;
-    height: 58px;
-    background-color: #FF4747;
-    filter: drop-shadow(4px, 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 10px;
-    color: white;
-    font-size: 23px;
-    line-height: 27.6px;
-    font-weight: 400;
-    outline: none;
-    border: none;
-    z-index: 1000;
-    position: relative;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #FA7902;
+    color: #FA7902;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 
     &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
         background-color: #FA7902;
-        transition: all 125ms ease-in-out;
+        color: white;
+    }
+
+    &.active {
+        background-color: #FA7902;
+        color: white;
+        border-color: #FA7902;
     }
 }
-
-p, 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    pointer-events: none;
- }
 
 a {
     text-decoration: none;
     cursor: pointer;
-    color: white;
+    color: #FA7902;
 
     &:hover {
-        color: orange;
+       color: white;
         transition: all 225ms ease-in-out;
     }
 }
