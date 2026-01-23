@@ -22,6 +22,7 @@
     "contact": "Kontakt"
   },
   "portfolio": {
+    "allProjects": "Alle Projekte",
     "examples": "Hier sind ein paar Beispiele meiner Projekte die ich Selbstständig, oder in Gruppenarbeit programmiert habe.",
     "join": "Ein Task manager inspiriert vom Kanban System. Erstellen und organisieren einzelner Tasks per drag and drop funktion.",
     "join-subtext": "Mein Part: AddTask / AddTask Board / Datenschutz / Rechtlicher Hinweis",

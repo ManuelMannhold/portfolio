@@ -9,7 +9,7 @@
       <p class="projects-description">{{ "portfolio.examples" | translate }}</p>
       <div class="filter-buttons">
         <button class="filter-btn" [class.active]="activeFilter === 'all'" (click)="setFilter('all')">
-          All Projects
+          {{ "portfolio.allProjects" | translate }}
         </button>
         <button class="filter-btn" [class.active]="activeFilter === 'javascript'" (click)="setFilter('javascript')">
           JavaScript

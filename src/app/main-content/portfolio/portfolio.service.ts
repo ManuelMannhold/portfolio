@@ -42,27 +42,27 @@ export class PortfolioService {
       liveUrl: 'https://pokedex.manuel-mannhold.de/index.html',
       githubUrl: 'https://github.com/ManuelMannhold/pokedex-new-design.git',
       type: 'javascript',
-    },
-    {
-      id: 'ng-chat',
-      title: 'NG-Chat',
-      tech: 'HTML | CSS | TypeScript | Angular',
-      descriptionKey: 'portfolio.ng-chat',
-      image: 'assets/img/ng-chat-new.png',
-      liveUrl: 'https://ng-chat.manuel-mannhold.de',
-      githubUrl: 'https://github.com/ManuelMannhold/ng-chat',
-      type: 'angular',
-    },
-    {
-      id: 'echo-note',
-      title: 'Echo Note',
-      tech: 'HTML | CSS | TypeScript | Angular',
-      descriptionKey: 'portfolio.echo-note',
-      image: 'assets/img/echo-note-new.png',
-      liveUrl: 'https://echo-note.manuel-mannhold.de',
-      githubUrl: 'https://github.com/ManuelMannhold/echo-note',
-      type: 'angular',
-    },
+    }
+    // {
+    //   id: 'ng-chat',
+    //   title: 'NG-Chat',
+    //   tech: 'HTML | CSS | TypeScript | Angular',
+    //   descriptionKey: 'portfolio.ng-chat',
+    //   image: 'assets/img/ng-chat-new.png',
+    //   liveUrl: 'https://ng-chat.manuel-mannhold.de',
+    //   githubUrl: 'https://github.com/ManuelMannhold/ng-chat',
+    //   type: 'angular',
+    // },
+    // {
+    //   id: 'echo-note',
+    //   title: 'Echo Note',
+    //   tech: 'HTML | CSS | TypeScript | Angular',
+    //   descriptionKey: 'portfolio.echo-note',
+    //   image: 'assets/img/echo-note-new.png',
+    //   liveUrl: 'https://echo-note.manuel-mannhold.de',
+    //   githubUrl: 'https://github.com/ManuelMannhold/echo-note',
+    //   type: 'angular',
+    // },
   ];
 
   getProjects(): Project[] {
