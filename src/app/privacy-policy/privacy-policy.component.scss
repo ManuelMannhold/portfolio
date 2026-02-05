@@ -39,3 +39,93 @@ li {
 p {
     text-align: center;
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #141d2f;
+    color: white;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    padding: 40px;
+    border-radius: 20px;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.4s ease-out;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ff4747;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        width: 95%;
+        padding: 30px;
+        max-height: 90vh;
+    }
+
+    @media (max-width: 480px) {
+        width: 90%;
+        height: 90%;
+        max-height: 100vh;
+        border-radius: 0;
+        padding: 60px 20px 30px 20px;
+        border-radius: 30px;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+        color: #ff4747;
+        transform: scale(1.1) rotate(90deg);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

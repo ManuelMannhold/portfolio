@@ -20,7 +20,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(115px, 100px));
     gap: 20px;
-    z-index: 100000;
+    z-index: 20;
 
     img:hover {
         transform: translateY(-10px);
@@ -69,5 +69,5 @@ section {
 .orange {
     position: absolute;
     left: -40px;
-    z-index: 10000;
+    z-index: 10;
 }

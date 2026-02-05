@@ -1,16 +1,21 @@
-<div id="imprint">
-    <div id="imprint-container" class="d-none">
-        <h2 class="headline">{{'imprint.imprint' | translate}}</h2>
-        <div class="contact">
-            <div class="adress">
-                <h2>Manuel Mannhold</h2>
-                <p>Paul-Schreier-Straße 26</p>
-                <p>16761 Hennigsdorf</p>
-            </div>
-            <div class="my-contact">
-                <p>Tel: <a href="tel: +4917683168535">017683168535</a></p>
-                <p>Email: <a href="mailto:contact@manuel-mannhold.de">contact&#64;manuel-mannhold.de</a></p>
-            </div>
-        </div>
-    </div>
+<div class="modal-overlay" (click)="close()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="close()">&times;</button>
+    
+    <div class="imprint-body">
+      <h1>Impressum</h1>
+      <section>
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>Manuel Mannhold<br>
+        Musterstraße 123<br>
+        12345 Musterstadt</p>
+      </section>
+
+      <section>
+        <h2>Kontakt</h2>
+        <p>E-Mail: contact&#64;manuel-mannhold.de</p>
+      </section>
+      
+      </div>
+  </div>
 </div>

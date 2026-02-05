@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -10,6 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class PrivacyPolicyComponent {
   private translateService = inject(TranslateService);
+   @Output() closeEvent = new EventEmitter<void>();
 
   /**
   * Lifecycle hook that is called after Angular has initialized the component.
@@ -17,5 +18,12 @@ export class PrivacyPolicyComponent {
   */
   ngOnInit(): void {
     window.scrollTo(0, 0);
+  }
+
+  /**
+ * Emits the close event to notify the parent component.
+ */
+  close() {
+    this.closeEvent.emit();
   }
 }

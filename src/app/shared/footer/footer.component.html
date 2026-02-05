@@ -3,20 +3,38 @@
         <div class="footer-name">
             <h2>Manuel</h2>
             <span>
-                <a routerLink="imprint" id="imprint">{{'footer.imprint' | translate}}</a>
-                <a routerLink="privacy-policy" id="privacy-policy">{{'policy.policy' | translate}}</a>
+                <button class="footer-link-btn" (click)="openModal('imprint')">
+                    {{ 'footer.imprint' | translate }}
+                </button>
+
+                <button class="footer-link-btn" (click)="openModal('privacy')">
+                    {{ 'policy.policy' | translate }}
+                </button>
             </span>
         </div>
+
+        @if (activeModal === 'imprint') {
+            <app-imprint (closeEvent)="closeModal()"></app-imprint>
+        }
+
+        @if (activeModal === 'privacy') {
+            <app-privacy-policy (closeEvent)="closeModal()"></app-privacy-policy>
+        }
+
         <div class="footer-created">
             <p>&copy; Manuel Mannhold 2024</p>
         </div>
+
         <div class="footer-links">
-            <a class="github-button" href="https://github.com/ManuelMannhold" target="_blank"><img
-                    src="../../assets/img/github-button.png" alt=""></a>
-            <a class="mail-button" href="mailto:M.Mannhold@gmx.de" target="_blank"><img
-                    src="../../assets/img/mail-button.png" alt=""></a>
-            <a class="linkedin-button" href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_nav-header-signin"
-                target="_blank"><img src="../../assets/img/linkedin-button.png" alt=""></a>
+            <a class="github-button" href="https://github.com/ManuelMannhold" target="_blank">
+                <img src="../../assets/img/github-button.png" alt="Github">
+            </a>
+            <a class="mail-button" href="mailto:M.Mannhold@gmx.de" target="_blank">
+                <img src="../../assets/img/mail-button.png" alt="Mail">
+            </a>
+            <a class="linkedin-button" href="https://www.linkedin.com/..." target="_blank">
+                <img src="../../assets/img/linkedin-button.png" alt="LinkedIn">
+            </a>
         </div>
     </footer>
 </div>

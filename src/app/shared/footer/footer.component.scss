@@ -1,5 +1,5 @@
 .d-none {
-    display: none!important;
+    display: none !important;
 }
 
 .footer-container {
@@ -40,6 +40,25 @@ footer {
 .footer-links {
     display: flex;
     gap: 50px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-link-btn {
+    background: none;
+    border: none;
+    color: white; /* Oder deine Link-Farbe */
+    font-family: inherit;
+    font-size: 18px; /* An dein Design anpassen */
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: orange;
+        text-decoration: underline;
+    }
 }
 
 /*<-----------imprint-------------->*/
