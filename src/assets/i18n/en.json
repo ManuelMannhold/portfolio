@@ -29,8 +29,7 @@
     "pollo": "A game written with Javascript in Object Oriented Programming",
     "portfolio": "A collection of projects I have developed, either individually or as part of a team.",
     "pokedex": "A self-programmed Pokédex based on the PokéAPI.",
-    "ng-chat": "A chat program with Angular.",
-    "echo-note": "Notes app with Angular programmed."
+    "pronode": "A high-performance Angular application for organizing notes and folders. The project combines real-time database synchronization via Firebase with a modern Glassmorphism design and intuitive UX design."
   },
   "testimonials": [
     {
