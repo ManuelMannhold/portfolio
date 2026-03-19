@@ -22,22 +22,30 @@ export class FooterComponent {
   activeModal: 'imprint' | 'privacy' | null = null;
 
   constructor(private renderer: Renderer2) { }
-
+private scrollPosition = 0;
   /**
    * Opens the specified modal and disables background scrolling.
    * @param type - The type of modal to display ('imprint' or 'privacy').
    */
   openModal(type: 'imprint' | 'privacy') {
-    this.activeModal = type;
-    this.renderer.addClass(document.body, 'no-scroll');
+    this.scrollPosition = window.scrollY;
+
+  this.activeModal = type;
+
+  document.body.style.top = `-${this.scrollPosition}px`;
+  document.body.style.position = 'fixed';
   }
 
   /**
    * Closes the active modal and re-enables background scrolling.
    */
   closeModal() {
-    this.activeModal = null;
-    this.renderer.removeClass(document.body, 'no-scroll');
+    document.body.style.position = '';
+  document.body.style.top = '';
+
+  window.scrollTo(0, this.scrollPosition);
+
+  this.activeModal = null;
   }
 
   /** @returns The current visibility state of the imprint modal. */
