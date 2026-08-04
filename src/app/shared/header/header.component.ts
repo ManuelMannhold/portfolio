@@ -15,6 +15,28 @@ export class HeaderComponent {
   private translateService = inject(TranslateService);
   english: boolean = true;
   showGoBack = false;
+  isMenuOpen: boolean = false;
+
+  toggleResponsiveMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+    
+    let openMenu: HTMLElement | null = document.getElementById('responsive-menu');
+    if (openMenu) {
+      if (this.isMenuOpen) {
+        openMenu.style.transform = 'translate(0)';
+      } else {
+        openMenu.style.transform = 'translate(10000px)';
+      }
+    }
+  }
+
+  closeResponsiveMenu(): void {
+    this.isMenuOpen = false;
+    let responsMenu = document.getElementById('responsive-menu');
+    if (responsMenu) {
+      responsMenu.style.transform = 'translate(10000px)';
+    }
+  }
 
   constructor(private router: Router) {
     const savedLanguage = localStorage.getItem('language');
@@ -81,14 +103,5 @@ toTop(): void {
     let openMenu: HTMLElement | null =
       document.getElementById('responsive-menu');
     if (openMenu) openMenu.style.transform = 'translate(0)';
-  }
-
-  /**
-   * Closes the responsive menu by modifying its transform style.
-   * Finds the element with the ID 'responsive-menu' and sets its transform property to move it out of view.
-   */
-  closeResponsiveMenu() {
-    let responsMenu = document.getElementById('responsive-menu');
-    if (responsMenu) responsMenu.style.transform = 'translate(10000px)';
   }
 }

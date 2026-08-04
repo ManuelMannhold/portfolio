@@ -31,14 +31,18 @@
     </span>
   </div>
   <div
-    id="responsive-menu-button"
-    class="d-none"
-    (click)="openResponsiveMenu()"
-  >
-    <img src="../../assets/img/responsive_menu.png" alt="" />
-  </div>
+  id="responsive-menu-button"
+  class="d-none"
+  (click)="toggleResponsiveMenu()"
+>
+  <img 
+    [src]="isMenuOpen 
+      ? '../../assets/img/close-button.png' 
+      : '../../assets/img/responsive_menu.png'" 
+    [alt]="isMenuOpen ? 'Menü schließen' : 'Menü öffnen'" 
+  />
+</div>
   <div id="responsive-menu">
-    <div id="close-responsive" (click)="closeResponsiveMenu()">X</div>
     <a href="#about-me-anchor">{{ "responsmenu.aboutme" | translate }}</a>
     <a href="#my-skill-anchor">{{ "responsmenu.skill" | translate }}</a>
     <a href="#portfolio-anchor">{{ "responsmenu.portfolio" | translate }}</a>

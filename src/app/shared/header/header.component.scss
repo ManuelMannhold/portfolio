@@ -75,6 +75,13 @@ nav {
 #responsive-menu-button {
   padding-left: 30px;
   cursor: pointer;
+  z-index: 10000;
+
+  img {
+    width: 30px; 
+    height: auto;
+    display: block;
+  }
 }
 
 #responsive-menu {
