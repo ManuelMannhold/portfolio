@@ -47,8 +47,16 @@
     <a href="#my-skill-anchor">{{ "responsmenu.skill" | translate }}</a>
     <a href="#portfolio-anchor">{{ "responsmenu.portfolio" | translate }}</a>
     <a href="#contact-anchor">{{ "responsmenu.contact" | translate }}</a>
-    <a href="imprint">{{ "responsmenu.imprint" | translate }}</a>
-    <a href="privacy-policy">{{ "policy.policy" | translate }}</a>
+    <button (click)="openModal('imprint')">{{ "responsmenu.imprint" | translate }}</button>
+    <button (click)="openModal('privacy')">{{ "policy.policy" | translate }}</button>
   </div>
   </div>
 </nav>
+
+@if (activeModal === 'imprint') {
+  <app-imprint (closeEvent)="closeModal()"></app-imprint>
+}
+
+@if (activeModal === 'privacy') {
+  <app-privacy-policy (closeEvent)="closeModal()"></app-privacy-policy>
+}

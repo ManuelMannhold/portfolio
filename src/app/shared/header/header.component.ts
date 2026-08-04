@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { PrivacyPolicyComponent } from '../../privacy-policy/privacy-policy.component';
+import { ImprintComponent } from '../../imprint/imprint.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule, CommonModule],
+  imports: [TranslateModule, CommonModule, ImprintComponent, PrivacyPolicyComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss', './media.scss'],
 })
@@ -16,10 +18,11 @@ export class HeaderComponent {
   english: boolean = true;
   showGoBack = false;
   isMenuOpen: boolean = false;
+  activeModal: 'imprint' | 'privacy' | null = null;
 
   toggleResponsiveMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    
+
     let openMenu: HTMLElement | null = document.getElementById('responsive-menu');
     if (openMenu) {
       if (this.isMenuOpen) {
@@ -38,7 +41,7 @@ export class HeaderComponent {
     }
   }
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private renderer: Renderer2) {
     const savedLanguage = localStorage.getItem('language');
     if (savedLanguage) {
       this.currentLanguage = savedLanguage;
@@ -48,15 +51,15 @@ export class HeaderComponent {
   }
 
   @HostListener('window:scroll', [])
-onScroll(): void {
-  this.showGoBack = window.scrollY > 200;
-}
+  onScroll(): void {
+    this.showGoBack = window.scrollY > 200;
+  }
 
-toTop(): void {
-  this.router.navigateByUrl('/').then(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
+  toTop(): void {
+    this.router.navigateByUrl('/').then(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   /**
    * Lifecycle hook that is called after Angular has initialized the component.
@@ -79,6 +82,25 @@ toTop(): void {
     this.translateService.use(this.currentLanguage);
     localStorage.setItem('language', this.currentLanguage);
     this.setActiveColorForLanguage();
+  }
+
+  /**
+  * Opens the specified modal and disables background scrolling.
+  * @param type - The type of modal to display ('imprint' or 'privacy').
+  */
+  openModal(type: 'imprint' | 'privacy') {
+    this.activeModal = type;
+    this.renderer.addClass(document.body, 'no-scroll');
+    this.closeResponsiveMenu();
+  }
+
+
+  /**
+   * Closes the active modal and re-enables background scrolling.
+   */
+  closeModal() {
+    this.activeModal = null;
+    this.renderer.removeClass(document.body, 'no-scroll');
   }
 
   /**

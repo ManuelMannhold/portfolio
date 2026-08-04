@@ -2,6 +2,14 @@
     color: white;
 }
 
+:host {
+  color: #ffffff;
+
+  h1, h2, h3, p, span, a {
+    color: #ffffff;
+  }
+}
+
 a {
     color: blue;
     cursor: pointer;
